@@ -475,6 +475,89 @@
   }
 
   /* ------------------------------------------------------------------ *
+   * Particelle nello sfondo: puntini azzurri che salgono piano e si
+   * accendono e spengono un poco. Disegnati su un <canvas> dentro
+   * .scene-bg. Con "riduci movimento" si disegnano una volta e restano
+   * ferme.
+   * ------------------------------------------------------------------ */
+
+  function init_particles() {
+    var backdrop = document.querySelector(".scene-bg");
+    if (!backdrop) return;
+
+    var canvas = document.createElement("canvas");
+    canvas.className = "scene-bg__particles";
+    canvas.setAttribute("aria-hidden", "true");
+    backdrop.appendChild(canvas);
+
+    var context = canvas.getContext("2d");
+    if (!context) return;
+
+    var still = prefers_reduced_motion();
+    var ratio = Math.min(window.devicePixelRatio || 1, 2);
+    var width = 0;
+    var height = 0;
+    var particles = [];
+
+    function make_particle(anywhere) {
+      return {
+        x: Math.random() * width,
+        y: anywhere ? Math.random() * height : height + 10,
+        size: 0.6 + Math.random() * 1.8,
+        speed: 0.08 + Math.random() * 0.25,
+        sway: Math.random() * Math.PI * 2,
+        glow: Math.random() * Math.PI * 2
+      };
+    }
+
+    function resize() {
+      /* Su iPhone "resize" scatta anche quando Safari mostra o nasconde le
+         barre: se la misura non cambia, le particelle restano dove sono. */
+      if (canvas.clientWidth === width && canvas.clientHeight === height) return;
+      width = canvas.clientWidth;
+      height = canvas.clientHeight;
+      canvas.width = Math.round(width * ratio);
+      canvas.height = Math.round(height * ratio);
+      context.setTransform(ratio, 0, 0, ratio, 0, 0);
+      var count = Math.min(110, Math.round((width * height) / 11000));
+      particles = [];
+      for (var i = 0; i < count; i += 1) particles.push(make_particle(true));
+      if (still) draw();
+    }
+
+    function draw() {
+      context.clearRect(0, 0, width, height);
+      particles.forEach(function (particle) {
+        if (!still) {
+          particle.y -= particle.speed;
+          particle.sway += 0.01;
+          particle.glow += 0.02;
+          particle.x += Math.sin(particle.sway) * 0.15;
+          if (particle.y < -10) {
+            var fresh = make_particle(false);
+            particle.x = fresh.x;
+            particle.y = fresh.y;
+          }
+        }
+        var alpha = 0.25 + 0.35 * (0.5 + 0.5 * Math.sin(particle.glow));
+        context.fillStyle = "rgba(127, 200, 216, " + alpha.toFixed(3) + ")";
+        context.beginPath();
+        context.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        context.fill();
+      });
+    }
+
+    function loop() {
+      draw();
+      window.requestAnimationFrame(loop);
+    }
+
+    resize();
+    window.addEventListener("resize", resize);
+    if (!still) window.requestAnimationFrame(loop);
+  }
+
+  /* ------------------------------------------------------------------ *
    * Torna su: freccia fissa che compare dopo 600px di scroll.
    * ------------------------------------------------------------------ */
 
@@ -576,6 +659,7 @@
    * Avvio
    * ------------------------------------------------------------------ */
 
+  init_particles();
   init_back_to_top();
   init_shopfront();
   init_reveal();
