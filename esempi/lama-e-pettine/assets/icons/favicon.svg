@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Lama e Pettine">
+  <rect width="64" height="64" rx="14" fill="#0e2332"/>
+  <rect x="1.5" y="1.5" width="61" height="61" rx="12.5" fill="none" stroke="#f3e7d2" stroke-width="1.5" opacity=".55"/>
+  <rect x="21" y="7" width="22" height="50" rx="11" fill="#f3e7d2"/>
+  <clipPath id="tubo">
+    <rect x="21" y="7" width="22" height="50" rx="11"/>
+  </clipPath>
+  <g clip-path="url(#tubo)">
+    <rect x="17" y="3" width="30" height="58" fill="#f3e7d2"/>
+    <g fill="none" stroke-width="8">
+      <path d="M10 12 54 35" stroke="#b23a26"/>
+      <path d="M10 27 54 50" stroke="#0e2332"/>
+      <path d="M10 42 54 65" stroke="#b23a26"/>
+      <path d="M10 -3 54 20" stroke="#0e2332"/>
+    </g>
+  </g>
+  <rect x="17" y="4" width="30" height="7" rx="3.5" fill="#f3e7d2"/>
+  <rect x="17" y="53" width="30" height="7" rx="3.5" fill="#f3e7d2"/>
+  <path d="M21 8v48M43 8v48" stroke="#0e2332" stroke-width="1.5" opacity=".28"/>
+</svg>
