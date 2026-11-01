@@ -128,14 +128,10 @@
   display: flex;
   align-items: center;
   min-height: 2.75rem;
-  text-decoration: underline;
-  text-decoration-color: rgba(255, 255, 255, 0.4);
-  text-underline-offset: 0.25em;
 }
 
 .hero-phone:hover .hero-phone__caption {
   color: #fff;
-  text-decoration-color: #fff;
 }
 
 .hero-phone__frame {
@@ -297,12 +293,21 @@
   }
 }
 
+/* Lavori, Chi siamo e Domande non riempiono per forza tutto lo schermo. */
+.scene--work,
+.scene--team,
+.scene--faq,
+.scene--end {
+  min-height: 0;
+  padding-block: var(--space-2xlarge);
+}
+
 /* 3 · Come si lavora: una schermata che resta ferma e cambia */
 .pin {
   position: relative;
   z-index: 1;
-  height: 400vh;
-  height: 400svh;
+  height: 250vh;
+  height: 250svh;
   color: #fff;
 }
 
@@ -435,26 +440,6 @@
 }
 
 @media (max-width: 63.99em) {
-  /* Da telefono i quattro passi scorrono più in fretta: 2,5 schermate
-     invece di 4. */
-  .pin {
-    height: 250vh;
-    height: 250svh;
-  }
-
-  /* Chi siamo e Domande non riempiono per forza tutto lo schermo:
-     niente vuoto fra la Tonnara e le domande. */
-  .scene--team,
-  .scene--faq,
-  .scene--end {
-    min-height: 0;
-  }
-
-  .scene--faq,
-  .scene--end {
-    padding-top: var(--space-xlarge);
-  }
-
   .pin__device {
     order: -1;
   }
@@ -507,55 +492,95 @@
   border-radius: 50%;
 }
 
-/* La Tonnara: una riga in fondo alla schermata. */
-.home-scenes .team__proof {
-  justify-self: stretch;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: var(--space-xsmall) var(--space-small);
-  max-width: none;
-  margin: 0;
-  padding-top: var(--space-medium);
-  border-top: 1px solid var(--l-line);
-  color: var(--l-soft);
-}
-
-.team__proof img {
-  width: 4.5rem;
-  height: auto;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
-  object-position: top center;
-  border-radius: 4px;
-}
-
-.team__proof a {
-  display: inline-flex;
-  align-items: center;
-  min-height: 2.75rem; /* area di tocco comoda */
-  color: #fff;
-  font-weight: var(--font-weight-bold);
-}
-
-.team__proof a:last-child {
-  margin-left: auto;
-}
-
 @media (min-width: 64em) {
   .team {
     grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
     align-items: center;
     column-gap: var(--space-2xlarge);
   }
+}
 
-  .team__proof {
-    grid-column: 1 / -1;
+/* 4 · Lavori: quello vero in grande, tre esempi da telefono */
+.work {
+  display: grid;
+  gap: var(--space-large);
+}
+
+.work__shots {
+  display: grid;
+  gap: var(--space-large);
+}
+
+.work__item {
+  display: grid;
+  gap: 0.2rem;
+  color: var(--l-soft);
+  text-decoration: none;
+}
+
+.work__item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: var(--space-xsmall);
+  border: 1px solid var(--l-line);
+  border-radius: 1rem;
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.4);
+}
+
+.work__item strong {
+  color: #fff;
+  font-size: 1.35rem;
+}
+
+.work__more-text {
+  display: grid;
+  align-content: center;
+  gap: var(--space-small);
+}
+
+.work__more {
+  display: grid;
+  gap: var(--space-large);
+}
+
+.work__phones {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.work__phones li {
+  flex: 0 1 30%;
+  max-width: 190px;
+}
+
+.work__phones li:nth-child(1) { rotate: -5deg; translate: 8% 4%; }
+.work__phones li:nth-child(2) { position: relative; z-index: 1; }
+.work__phones li:nth-child(3) { rotate: 5deg; translate: -8% 4%; }
+
+.work__phones img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 5px solid #05061F;
+  border-radius: 1.4rem;
+}
+
+@media (min-width: 64em) {
+  .work__shots {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .work__more {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
   }
 }
 
-/* 5 · Domande: righe, non riquadri */
+/* 6 · Domande: righe, non riquadri */
 .faq {
   display: grid;
   gap: var(--space-large);
@@ -720,13 +745,16 @@
     justify-self: center;
   }
 
-  .home-scenes .team__proof {
-    justify-content: center;
+  .work__title,
+  .work__item,
+  .work__more-text {
+    justify-items: center;
     text-align: center;
   }
 
-  .team__proof a:last-child {
-    margin-left: 0;
+  /* La bolla WhatsApp passa sul lato destro: l'elenco le lascia spazio. */
+  .offer__list li {
+    padding-right: 2.5rem;
   }
 }
 
