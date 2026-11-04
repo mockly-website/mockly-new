@@ -293,7 +293,9 @@
   }
 }
 
-/* Lavori, Chi siamo e Domande non riempiono per forza tutto lo schermo. */
+/* Dopo la prima schermata nessuna sezione riempie per forza tutto lo schermo:
+   lo spazio fra una e l'altra resta uguale (64px sopra e sotto). */
+.scene--offer,
 .scene--work,
 .scene--team,
 .scene--faq,
@@ -320,6 +322,14 @@
   height: 100svh;
   padding-block: calc(var(--header-height) + var(--space-medium)) var(--space-medium);
   overflow: hidden;
+}
+
+/* Il contenuto parte subito sotto l'intestazione invece che a metà schermo:
+   niente vuoto grande fra "Cosa ricevi" e i passi. */
+@media (min-height: 40em) {
+  .pin__stage {
+    align-items: start;
+  }
 }
 
 .pin__inner {

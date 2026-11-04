@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Ovunque Accessibile: come l'abbiamo costruito | Mockly</title>
+  <meta name="description" content="Come abbiamo costruito il sito e la web-app di Ovunque Accessibile, la mappa dei luoghi accessibili di Angelo e Lorenzo: cosa abbiamo fatto e perché.">
+  <link rel="canonical" href="https://mockly.it/ovunque-accessibile.html">
+  <meta name="theme-color" content="#0D0E3A">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="Mockly">
+  <meta property="og:title" content="Ovunque Accessibile: come l'abbiamo costruito">
+  <meta property="og:description" content="Come abbiamo costruito il sito e la web-app di Ovunque Accessibile, la mappa dei luoghi accessibili di Angelo e Lorenzo: cosa abbiamo fatto e perché.">
+  <meta property="og:url" content="https://mockly.it/ovunque-accessibile.html">
+  <meta property="og:image" content="https://mockly.it/assets/img/og-cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mockly: parti dal tuo lavoro, al sito pensiamo noi.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ovunque Accessibile: come l'abbiamo costruito">
+  <meta name="twitter:description" content="Come abbiamo costruito il sito e la web-app di Ovunque Accessibile, la mappa dei luoghi accessibili di Angelo e Lorenzo: cosa abbiamo fatto e perché.">
+  <meta name="twitter:image" content="https://mockly.it/assets/img/og-cover.png">
+  <meta name="twitter:image:alt" content="Mockly: parti dal tuo lavoro, al sito pensiamo noi.">
+
+  <link rel="stylesheet" href="assets/css/fonts.css?v=20261104c">
+
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="assets/img/logo-mockly-icon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="assets/img/favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <link rel="stylesheet" href="assets/css/tokens.css?v=20261104c">
+  <link rel="stylesheet" href="assets/css/base.css?v=20261104c">
+  <link rel="stylesheet" href="assets/css/components.css?v=20261104c">
+  <link rel="stylesheet" href="assets/css/pages.css?v=20261104c">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Ovunque Accessibile: come l'abbiamo costruito",
+    "url": "https://mockly.it/ovunque-accessibile.html",
+    "about": {
+      "@type": "CreativeWork",
+      "name": "Ovunque Accessibile",
+      "url": "https://mockly-website.github.io/ovunque-accessibile/",
+      "creator": { "@type": "Organization", "name": "Mockly", "url": "https://mockly.it/" }
+    }
+  }
+  </script>
+</head>
+
+<body class="page-body night">
+  <!-- Sfondo: blu notte fermo, con una sola luce dall'alto. -->
+  <div class="scene-bg" aria-hidden="true"></div>
+
+  <a class="skip-link" href="#contenuto">Salta al contenuto</a>
+
+  <!-- Intestazione: uguale su tutte le pagine (logo, menu, tasto Chiama). -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+        <a class="site-header__logo" href="index.html">
+        <img class="site-header__logo-icon" src="assets/img/logo-mockly-icon-light.svg" alt="" width="100" height="100">
+        <span class="site-header__logo-text">mockly</span>
+      </a>
+
+      <!-- Menu orizzontale (visibile da 1280px in su, sotto resta solo l'hamburger) -->
+      <nav class="site-header__navigation" aria-label="Menu principale">
+        <ul class="site-header__navigation-list">
+          <li><a class="site-header__navigation-link" href="index.html">Home</a></li>
+          <li><a class="site-header__navigation-link" href="siti-web.html">Siti web</a></li>
+          <li><a class="site-header__navigation-link is-current" href="portfolio.html" aria-current="page">Portfolio</a></li>
+          <li><a class="site-header__navigation-link" href="chi-siamo.html">Chi siamo</a></li>
+          <li><a class="site-header__navigation-link" href="contatti.html">Contatti</a></li>
+        </ul>
+      </nav>
+
+      <!-- Hamburger: apre il pannello sotto i 1280px -->
+      <button class="site-header__toggle" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="menu-principale">
+        <span class="site-header__toggle-bar" aria-hidden="true"></span>
+        <span class="site-header__toggle-bar" aria-hidden="true"></span>
+        <span class="site-header__toggle-bar" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <!-- Velo scuro, chiude il menu se ci clicchi sopra -->
+    <div class="site-header__overlay"></div>
+
+    <!-- Pannello del menu (telefono/tablet) -->
+    <div class="site-header__panel" id="menu-principale" role="dialog" aria-modal="true" aria-label="Menu">
+      <div class="site-header__panel-head">
+        <p class="site-header__panel-brand"><img class="site-header__logo-icon" src="assets/img/logo-mockly-icon-light.svg" alt="" width="100" height="100">
+        <span class="site-header__logo-text">mockly</span></p>
+        <button class="site-header__close" type="button" aria-label="Chiudi il menu" data-menu-close>
+          <svg class="site-header__close-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <!-- Menu, versione telefono -->
+      <nav aria-label="Menu principale su telefono">
+        <p class="site-header__panel-label" aria-hidden="true">Menu</p>
+        <ul class="site-header__panel-list">
+          <li><a class="site-header__panel-link" href="index.html"><span class="site-header__panel-name">Home</span><span class="site-header__panel-hint">Da dove si parte</span></a></li>
+          <li><a class="site-header__panel-link" href="siti-web.html"><span class="site-header__panel-name">Siti web</span><span class="site-header__panel-hint">Cosa facciamo e l'assistenza</span></a></li>
+          <li><a class="site-header__panel-link is-current" href="portfolio.html" aria-current="page"><span class="site-header__panel-name">Portfolio</span><span class="site-header__panel-hint">Due lavori veri e dodici esempi</span></a></li>
+          <li><a class="site-header__panel-link" href="chi-siamo.html"><span class="site-header__panel-name">Chi siamo</span><span class="site-header__panel-hint">Noah, Adriano e Simone</span></a></li>
+          <li><a class="site-header__panel-link" href="contatti.html"><span class="site-header__panel-name">Contatti</span><span class="site-header__panel-hint">WhatsApp, telefono, modulo</span></a></li>
+        </ul>
+      </nav>
+      <!-- In fondo al menu: i due modi più rapidi per sentirci -->
+      <div class="site-header__panel-foot">
+        <a class="button button--primary site-header__panel-contact" href="https://wa.me/393517578080" aria-label="Scrivici su WhatsApp al 351 757 8080">WhatsApp</a>
+        <a class="button button--ghost site-header__panel-contact" href="tel:+393517578080" aria-label="Chiama il 351 757 8080">Chiama</a>
+      </div>
+    </div>
+  </header>
+
+    <main id="contenuto">
+
+    <!-- ── Hero ─────────────────────────────────────────────────────── -->
+    <section class="hero hero--page">
+      <div class="container">
+        <h1 class="hero__title-page">Ovunque Accessibile</h1>
+        <p class="hero__text">
+          Angelo e Lorenzo, due ragazzi in carrozzina, volevano un posto dove sapere prima di uscire se un luogo va bene per chi lo deve raggiungere.
+          Noi abbiamo costruito il sito e la web-app.
+        </p>
+        <div class="hero__actions button-group button-group--stacked">
+          <a class="button button--primary" href="https://mockly-website.github.io/ovunque-accessibile/" target="_blank" rel="noopener" aria-label="Apri il sito di Ovunque Accessibile in una nuova scheda">Apri il sito</a>
+          <a class="button button--secondary" href="https://mockly-website.github.io/ovunque-accessibile/app/" target="_blank" rel="noopener" aria-label="Apri la web-app di Ovunque Accessibile in una nuova scheda">Apri la web-app</a>
+        </div>
+        <div class="hero-phones" aria-hidden="true">
+          <span class="hero-phones__item"><img src="assets/img/projects/ovunque-accessibile-phone.webp" srcset="assets/img/projects/ovunque-accessibile-phone-300.webp 300w, assets/img/projects/ovunque-accessibile-phone.webp 520w" sizes="(min-width: 64em) 208px, 28vw" alt="" width="520" height="1125"></span>
+          <span class="hero-phones__item"><img src="assets/img/projects/ovunque-accessibile-scheda-phone.webp" srcset="assets/img/projects/ovunque-accessibile-scheda-phone-300.webp 300w, assets/img/projects/ovunque-accessibile-scheda-phone.webp 520w" sizes="(min-width: 64em) 208px, 28vw" alt="" width="520" height="1125"></span>
+          <span class="hero-phones__item"><img src="assets/img/projects/ovunque-accessibile-app-phone.webp" srcset="assets/img/projects/ovunque-accessibile-app-phone-300.webp 300w, assets/img/projects/ovunque-accessibile-app-phone.webp 520w" sizes="(min-width: 64em) 208px, 28vw" alt="" width="520" height="1125"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Il problema ──────────────────────────────────────────────── -->
+    <section class="section" id="problema">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title section__title--wide">Da dove siamo partiti</h2>
+          <p class="section__intro">
+            &laquo;Accessibile&raquo; spesso non vuol dire niente: un gradino all'ingresso, un bagno non attrezzato, informazioni vecchie.
+            Angelo e Lorenzo volevano schede con dati concreti (rampe, ascensori, parcheggi, bagni, larghezza delle porte, gradini),
+            scritte da chi in quel posto ci è stato. Per chi si muove in carrozzina, per chi ha difficoltà a camminare,
+            per le persone anziane, per le famiglie con il passeggino e per chi li accompagna.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Cosa abbiamo costruito ───────────────────────────────────── -->
+    <section class="section" id="cosa">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title section__title--wide">Cosa abbiamo costruito</h2>
+          <p class="section__intro">
+            Un pezzo alla volta, tutto sullo stesso archivio di dati: così l'app per gli store, quando arriverà, non dovrà rifare niente da capo.
+          </p>
+        </div>
+
+        <ol class="step-list">
+          <li class="step-list__item">
+            <div>
+              <h3 class="step-list__title">Una pagina di anteprima</h3>
+              <p class="step-list__text">Pubblicata subito, con il modulo per lasciare la propria email ed essere avvisati del lancio.</p>
+            </div>
+          </li>
+          <li class="step-list__item">
+            <div>
+              <h3 class="step-list__title">Il sito</h3>
+              <p class="step-list__text">
+                La mappa e l'elenco dei luoghi, la ricerca per città o nome, i filtri (ingresso, bagno, parcheggio), &laquo;Vicino a me&raquo;
+                e una scheda per ogni luogo con giudizio, misure, bagno, parcheggio, data dell'ultima verifica e indicazioni stradali.
+                Si consulta senza account.
+              </p>
+            </div>
+          </li>
+          <li class="step-list__item">
+            <div>
+              <h3 class="step-list__title">La web-app</h3>
+              <p class="step-list__text">
+                Si installa sul telefono direttamente dalla pagina, senza passare dagli store. Con un account si salvano i preferiti, si scrivono recensioni con domande guidate,
+                si segnalano luoghi nuovi o correzioni con le misure e fino a 5 foto.
+              </p>
+            </div>
+          </li>
+          <li class="step-list__item">
+            <div>
+              <h3 class="step-list__title">Il pannello per Angelo e Lorenzo</h3>
+              <p class="step-list__text">
+                Vedono la scheda com'è ora e com'è nella proposta, poi approvano o respingono con un motivo. Moderano recensioni e foto.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ── Una scheda ───────────────────────────────────────────────── -->
+    <section class="section" id="scheda">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title section__title--wide">Una scheda, da vicino</h2>
+          <p class="section__intro">
+            Il giudizio cambia in base all'esigenza scelta, e la scheda dice sempre da dove arriva l'informazione e quando è stata controllata.
+          </p>
+        </div>
+        <figure class="case-shot">
+          <img src="assets/img/projects/ovunque-accessibile-scheda.webp" srcset="assets/img/projects/ovunque-accessibile-scheda-400.webp 400w, assets/img/projects/ovunque-accessibile-scheda-800.webp 800w, assets/img/projects/ovunque-accessibile-scheda.webp 1440w" sizes="(min-width: 64em) 60rem, 92vw"
+               alt="Scheda del Museo Archeologico Nazionale di Cagliari sul sito Ovunque Accessibile: giudizio per carrozzina manuale, ingresso e bagno accessibili, mappa a lato"
+               width="1440" height="900" loading="lazy">
+          <figcaption>La scheda del Museo Archeologico Nazionale di Cagliari, vista da computer.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ── Le scelte ────────────────────────────────────────────────── -->
+    <section class="section" id="scelte">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title section__title--wide">Le scelte, e perché</h2>
+        </div>
+
+        <ul class="feature-grid">
+          <li class="feature-grid__item"><strong>Un giudizio per ogni esigenza</strong> <span>carrozzina manuale, carrozzina elettrica, difficoltà a camminare, persona anziana: un luogo può andare bene per una e non per l'altra. Alla prima visita chiediamo &laquo;Come ti muovi?&raquo;.</span></li>
+          <li class="feature-grid__item"><strong>Si vede quanto è affidabile</strong> <span>&laquo;Verificato sul posto&raquo; o &laquo;Segnalato dalla community&raquo;; dopo 24 mesi la scheda diventa &laquo;da ricontrollare&raquo;.</span></li>
+          <li class="feature-grid__item"><strong>Niente pubblicato senza approvazione</strong> <span>segnalazioni, foto e recensioni escono solo dopo il sì di Angelo e Lorenzo.</span></li>
+          <li class="feature-grid__item"><strong>Foto rispettose</strong> <span>il telefono toglie la posizione GPS prima dell'invio, e ogni foto chiede una breve descrizione per chi non vede.</span></li>
+          <li class="feature-grid__item"><strong>Un sito che tutti possono usare</strong> <span>standard WCAG 2.2 livello AA: tastiera, lettori di schermo, testi ingrandibili, bottoni grandi, nessuna informazione affidata solo al colore. Pagine controllate con axe, zero errori.</span></li>
+          <li class="feature-grid__item"><strong>Il loro marchio, più leggibile</strong> <span>logo e colori di sempre; per i testi Atkinson Hyperlegible, un carattere pensato per chi vede poco, e Fredoka nei titoli al posto di Chalkboard SE, che su Android e Windows non c'è.</span></li>
+          <li class="feature-grid__item"><strong>I dati restano di chi li scrive</strong> <span>dal profilo si scaricano i propri dati e si elimina l'account; l'archivio sta in Europa.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ── Tempi ────────────────────────────────────────────────────── -->
+    <section class="section" id="tempi-lavoro">
+      <div class="container container--narrow">
+        <div class="section__header">
+          <h2 class="section__title section__title--wide">Una settimana per provarlo</h2>
+          <p class="section__intro">
+            A una settimana dalla prima chiamata, sito e web-app erano già da provare dal telefono. Il lavoro continua insieme a loro:
+            i prossimi passi sono le pagine per Google di ogni luogo e l'app per Android.
+          </p>
+        </div>
+        <p class="push-medium">
+          <a class="button button--ghost" href="portfolio.html">Torna al portfolio</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ── Chiusura ─────────────────────────────────────────────────── -->
+    <section class="call-to-action is-highlighted">
+      <div class="container">
+        <div class="call-to-action__inner">
+          <div>
+            <h2 class="call-to-action__title">Hai un progetto da far partire?</h2>
+            <p class="call-to-action__text">
+              Raccontaci cosa vuoi fare: ti diciamo come lo costruiremmo e quanto ci vuole.
+            </p>
+          </div>
+          <div>
+            <div class="call-to-action__actions button-group button-group--stacked">
+              <a class="button button--primary" href="https://wa.me/393517578080?text=Ciao%20Mockly%2C%20ho%20visto%20il%20lavoro%20per%20Ovunque%20Accessibile%20e%20vorrei%20parlarvi%20di%20un%20progetto." aria-label="Scrivici su WhatsApp al 351 757 8080">Scrivici su WhatsApp</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  
+
+  <!-- Piè di pagina: uguale su tutte le pagine. -->
+  <footer class="site-footer">
+    <div class="container">
+
+      <!-- La facciata di un negozio: la serranda si alza mentre arrivi in fondo. -->
+      <div class="shopfront" data-shopfront>
+        <p class="shopfront__sign"><img class="shopfront__logo" src="assets/img/logo-mockly-icon-light.svg" alt="" width="100" height="100"><span class="shopfront__name">mockly</span><span class="shopfront__motto">Siti web, senza complessità.</span></p>
+        <div class="shopfront__awning" aria-hidden="true"></div>
+
+        <div class="shopfront__bay" data-shopfront-bay>
+          <div class="shopfront__shop">
+            <div class="shopfront__glass">
+              <ul class="shopfront__contacts">
+                <li><a class="shopfront__contact" href="https://wa.me/393517578080" aria-label="Scrivici su WhatsApp al 351 757 8080"><svg class="shopfront__icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 15.5 5 12a6 6 0 1 1 2.4 2.1L4 15.5Z"/></svg><span class="shopfront__contact-text"><small>WhatsApp</small>351 757 8080</span></a></li>
+                <li><a class="shopfront__contact" href="tel:+393517578080" aria-label="Chiama il 351 757 8080"><svg class="shopfront__icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M6.6 2.5 4.3 3.2C3.5 3.5 3 4.3 3.1 5.1c.7 6 5.8 11.1 11.8 11.8.8.1 1.6-.4 1.9-1.2l.7-2.3a1 1 0 0 0-.6-1.2l-3.2-1.2a1 1 0 0 0-1.1.3l-1 1.2a9.6 9.6 0 0 1-4.6-4.6l1.2-1a1 1 0 0 0 .3-1.1L7.8 3.1a1 1 0 0 0-1.2-.6Z"/></svg><span class="shopfront__contact-text"><small>Telefono</small>351 757 8080</span></a></li>
+                <li><a class="shopfront__contact" href="mailto:mockly.website@gmail.com" aria-label="Scrivi a mockly.website@gmail.com"><svg class="shopfront__icon" viewBox="0 0 20 20" aria-hidden="true"><rect x="2.5" y="4.5" width="15" height="11" rx="2"/><path d="m3 6 7 5 7-5"/></svg><span class="shopfront__contact-text"><small>Email</small>mockly.website@gmail.com</span></a></li>
+                <li><a class="shopfront__contact" href="https://www.instagram.com/mockly.site/" target="_blank" rel="noopener"><svg class="shopfront__icon" viewBox="0 0 20 20" aria-hidden="true"><rect x="3" y="3" width="14" height="14" rx="4"/><circle cx="10" cy="10" r="3.2"/><circle cx="14.2" cy="5.8" r="0.6"/></svg><span class="shopfront__contact-text"><small>Instagram</small>@mockly.site</span></a></li>
+              </ul>
+            </div>
+
+            <nav class="shopfront__door" aria-label="Collegamenti del footer">
+              <ul class="shopfront__pages">
+                <li><a class="shopfront__page" href="index.html">Home</a></li>
+                <li><a class="shopfront__page" href="siti-web.html">Siti web</a></li>
+                <li><a class="shopfront__page" href="portfolio.html">Portfolio</a></li>
+                <li><a class="shopfront__page" href="chi-siamo.html">Chi siamo</a></li>
+                <li><a class="shopfront__page" href="contatti.html">Contatti</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="shopfront__roll" aria-hidden="true">
+            <span class="shopfront__paint">mockly</span>
+            <span class="shopfront__rail"></span>
+          </div>
+        </div>
+
+        <div class="shopfront__step" aria-hidden="true"></div>
+      </div>
+
+      <div class="site-footer__legal">
+        <span>© 2026 Mockly</span>
+        <a class="site-footer__link" href="privacy.html">Privacy</a>
+        <a class="site-footer__link" href="cookie.html">Cookie</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="whatsapp-bar">
+    <a class="button button--primary whatsapp-bar__button" href="https://wa.me/393517578080?text=Ciao%20Mockly%2C%20ho%20visto%20il%20vostro%20sito%20e%20vorrei%20parlare%20del%20sito%20della%20mia%20attivit%C3%A0." aria-label="Scrivici su WhatsApp al 351 757 8080">
+      <svg class="whatsapp-bar__icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 15.5 5 12a6 6 0 1 1 2.4 2.1L4 15.5Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+
+  <button class="back-to-top" type="button" aria-label="Torna in cima alla pagina">
+    <svg class="back-to-top__icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 16V4m0 0 6 6m-6-6L4 10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+
+  <script src="assets/js/main.js?v=20261104c"></script>
+
+</body>
+</html>

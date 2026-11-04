@@ -195,6 +195,7 @@ button {
   transition: transform var(--duration-base) var(--ease-out);
 }
 
+.skip-link:hover,
 .skip-link:focus-visible {
   transform: translateY(0);
   color: var(--color-text-inverse);

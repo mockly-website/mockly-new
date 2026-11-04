@@ -932,3 +932,38 @@
     padding-block: var(--space-xlarge) var(--space-large);
   }
 }
+
+/* Regole dei piani (siti-web, #assistenza): un punto per riga, con il titolo in grassetto. */
+.plan-rules p {
+  max-width: 62ch;
+  margin: 0 auto;
+}
+
+.plan-rules p + p {
+  margin-top: var(--space-xsmall);
+}
+
+.plan-rules strong {
+  color: var(--color-heading);
+}
+
+/* Pagina di un lavoro: una schermata grande del sito, con didascalia. */
+.case-shot {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.case-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-soft);
+}
+
+.case-shot figcaption {
+  margin-top: var(--space-xsmall);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-small);
+  text-align: center;
+}
