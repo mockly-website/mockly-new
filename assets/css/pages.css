@@ -967,3 +967,43 @@
   font-size: var(--font-size-small);
   text-align: center;
 }
+
+/* ---- Portfolio: lavori veri, etichetta leggera e bottoni separati ------- */
+
+.night .project-card__body .badge--real {
+  padding: 0.3rem 0.85rem 0.3rem 0.7rem;
+  background-color: rgba(127, 200, 216, 0.14);
+  border: 0;
+  border-radius: 999px;
+  color: #BFE6EF;
+}
+
+.night .project-card__body .badge--real::before {
+  content: "";
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-right: 0.5rem;
+  vertical-align: 0.08em;
+  background-color: #7FC8D8;
+  border-radius: 50%;
+}
+
+.night .project-card__buttons {
+  margin-top: var(--space-xsmall);
+  justify-content: center;
+}
+
+@media (min-width: 48em) {
+  .night .project-card__buttons {
+    justify-content: flex-start;
+  }
+}
+
+.night .project-card__body .badge--demo {
+  padding: 0.3rem 0.85rem;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 0;
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.82);
+}

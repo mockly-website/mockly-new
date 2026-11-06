@@ -1131,23 +1131,8 @@
   line-height: var(--line-height-small);
 }
 
-.project-card__action {
-  margin-top: auto;
-  padding-top: var(--space-xsmall);
-}
 
-.project-card__link {
-  display: inline-block;
-  padding-block: 0.6rem;
-  font-weight: var(--font-weight-bold);
-  text-decoration: underline;
-}
 
-.project-card__external-note {
-  display: block;
-  color: var(--color-text-muted);
-  font-size: var(--font-size-small);
-}
 
 .project-card.is-hidden {
   display: none;
