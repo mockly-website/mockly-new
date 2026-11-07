@@ -282,11 +282,6 @@ button {
   color: var(--color-text-muted);
 }
 
-.text-lead {
-  font-size: var(--font-size-lead);
-  line-height: var(--line-height-lead);
-}
-
 .push-small {
   margin-top: var(--space-small);
 }

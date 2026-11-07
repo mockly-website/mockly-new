@@ -1,9 +1,7 @@
 User-agent: *
 Allow: /
 
-# Pagine di servizio: utili a chi naviga, inutili nei risultati di ricerca.
-Disallow: /grazie.html
-Disallow: /404.html
+# grazie.html e 404.html hanno "noindex": Google deve poterle leggere per vederlo.
 
 # Strumenti di lavoro, non fanno parte del sito.
 Disallow: /tools/

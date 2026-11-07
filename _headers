@@ -1,0 +1,31 @@
+# Regole per Netlify (GitHub Pages ignora questo file).
+# Quanto a lungo il browser tiene i file, cosi dalla seconda pagina il sito
+# si apre quasi subito.
+#
+# ATTENZIONE: CSS e JS sono tenuti un anno perche nelle pagine hanno ?v=...
+# Quando si cambia un CSS o un JS va alzato il numero di versione in tutte
+# le pagine (vedi AGENTS.md, D25), altrimenti chi e gia passato vede il vecchio.
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+
+# Le pagine: sempre ricontrollate, cosi le modifiche si vedono subito
+/
+  Cache-Control: public, max-age=0, must-revalidate
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# CSS e JS: nome con la versione (?v=...), possono restare un anno
+/assets/css/*
+  Cache-Control: public, max-age=31536000, immutable
+/assets/js/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Caratteri: non cambiano mai
+/assets/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Immagini: una settimana (alcune vengono sostituite con lo stesso nome)
+/assets/img/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400

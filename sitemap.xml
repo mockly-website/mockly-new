@@ -1,35 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://mockly.it/</loc>
-    <lastmod>2026-10-23</lastmod>
+    <lastmod>2026-11-07</lastmod>
+    <image:image><image:loc>https://mockly.it/assets/img/projects/fiordaliso-phone.webp</image:loc></image:image>
+    <image:image><image:loc>https://mockly.it/assets/img/projects/tonnara-hero.webp</image:loc></image:image>
+    <image:image><image:loc>https://mockly.it/assets/img/projects/ovunque-accessibile-hero.webp</image:loc></image:image>
+    <image:image><image:loc>https://mockly.it/assets/img/projects/forno-nero-phone.webp</image:loc></image:image>
+    <image:image><image:loc>https://mockly.it/assets/img/projects/lama-e-pettine-phone.webp</image:loc></image:image>
+    <image:image><image:loc>https://mockly.it/assets/img/team/noah.webp</image:loc></image:image>
+    <image:image><image:loc>https://mockly.it/assets/img/team/adriano.webp</image:loc></image:image>
+    <image:image><image:loc>https://mockly.it/assets/img/team/simone.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://mockly.it/siti-web.html</loc>
-    <lastmod>2026-10-23</lastmod>
+    <lastmod>2026-11-07</lastmod>
+    <image:image><image:loc>https://mockly.it/assets/img/projects/il-loggiato-phone.webp</image:loc></image:image>
+    <image:image><image:loc>https://mockly.it/assets/img/projects/forno-nero-phone.webp</image:loc></image:image>
+    <image:image><image:loc>https://mockly.it/assets/img/projects/lama-e-pettine-phone.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://mockly.it/portfolio.html</loc>
-    <lastmod>2026-10-23</lastmod>
-  </url>
-  <url>
-    <loc>https://mockly.it/chi-siamo.html</loc>
-    <lastmod>2026-10-23</lastmod>
-  </url>
-  <url>
-    <loc>https://mockly.it/contatti.html</loc>
-    <lastmod>2026-10-23</lastmod>
-  </url>
-  <url>
-    <loc>https://mockly.it/privacy.html</loc>
-    <lastmod>2026-10-23</lastmod>
-  </url>
-  <url>
-    <loc>https://mockly.it/cookie.html</loc>
-    <lastmod>2026-10-23</lastmod>
+    <lastmod>2026-11-07</lastmod>
+    <image:image><image:loc>https://mockly.it/assets/img/projects/tonnara-hero.webp</image:loc></image:image>
+    <image:image><image:loc>https://mockly.it/assets/img/projects/tonnara-phone.webp</image:loc></image:image>
+    <image:image><image:loc>https://mockly.it/assets/img/projects/ovunque-accessibile-hero.webp</image:loc></image:image>
+    <image:image><image:loc>https://mockly.it/assets/img/projects/ovunque-accessibile-phone.webp</image:loc></image:image>
+    <image:image><image:loc>https://mockly.it/assets/img/projects/lama-e-pettine-hero.webp</image:loc></image:image>
+    <image:image><image:loc>https://mockly.it/assets/img/projects/lama-e-pettine-phone.webp</image:loc></image:image>
+    <image:image><image:loc>https://mockly.it/assets/img/projects/maestrale-hero.webp</image:loc></image:image>
+    <image:image><image:loc>https://mockly.it/assets/img/projects/maestrale-phone.webp</image:loc></image:image>
+    <image:image><image:loc>https://mockly.it/assets/img/projects/forno-nero-hero.webp</image:loc></image:image>
+    <image:image><image:loc>https://mockly.it/assets/img/projects/forno-nero-phone.webp</image:loc></image:image>
+    <image:image><image:loc>https://mockly.it/assets/img/projects/fiordaliso-hero.webp</image:loc></image:image>
+    <image:image><image:loc>https://mockly.it/assets/img/projects/fiordaliso-phone.webp</image:loc></image:image>
+    <image:image><image:loc>https://mockly.it/assets/img/projects/sale-marino-spa-hero.webp</image:loc></image:image>
+    <image:image><image:loc>https://mockly.it/assets/img/projects/sale-marino-spa-phone.webp</image:loc></image:image>
+    <image:image><image:loc>https://mockly.it/assets/img/projects/officina-grifone-hero.webp</image:loc></image:image>
+    <image:image><image:loc>https://mockly.it/assets/img/projects/officina-grifone-phone.webp</image:loc></image:image>
+    <image:image><image:loc>https://mockly.it/assets/img/projects/studio-tirso-hero.webp</image:loc></image:image>
+    <image:image><image:loc>https://mockly.it/assets/img/projects/studio-tirso-phone.webp</image:loc></image:image>
+    <image:image><image:loc>https://mockly.it/assets/img/projects/atelier-filo-hero.webp</image:loc></image:image>
+    <image:image><image:loc>https://mockly.it/assets/img/projects/atelier-filo-phone.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://mockly.it/ovunque-accessibile.html</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-07</lastmod>
+    <image:image><image:loc>https://mockly.it/assets/img/projects/ovunque-accessibile-phone.webp</image:loc></image:image>
+    <image:image><image:loc>https://mockly.it/assets/img/projects/ovunque-accessibile-scheda-phone.webp</image:loc></image:image>
+    <image:image><image:loc>https://mockly.it/assets/img/projects/ovunque-accessibile-app-phone.webp</image:loc></image:image>
+    <image:image><image:loc>https://mockly.it/assets/img/projects/ovunque-accessibile-scheda.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://mockly.it/chi-siamo.html</loc>
+    <lastmod>2026-11-07</lastmod>
+    <image:image><image:loc>https://mockly.it/assets/img/team/noah.webp</image:loc></image:image>
+    <image:image><image:loc>https://mockly.it/assets/img/team/adriano.webp</image:loc></image:image>
+    <image:image><image:loc>https://mockly.it/assets/img/team/simone.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://mockly.it/contatti.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://mockly.it/privacy.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://mockly.it/cookie.html</loc>
+    <lastmod>2026-11-07</lastmod>
   </url>
 </urlset>

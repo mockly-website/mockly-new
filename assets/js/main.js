@@ -442,7 +442,9 @@
     if (!context) return;
 
     var still = prefers_reduced_motion();
-    var ratio = Math.min(window.devicePixelRatio || 1, 2);
+    /* Su telefono: meno risoluzione e meno particelle, la differenza non si vede. */
+    var small = window.innerWidth < 768;
+    var ratio = Math.min(window.devicePixelRatio || 1, small ? 1.5 : 2);
     var width = 0;
     var height = 0;
     var particles = [];
@@ -467,20 +469,21 @@
       canvas.width = Math.round(width * ratio);
       canvas.height = Math.round(height * ratio);
       context.setTransform(ratio, 0, 0, ratio, 0, 0);
-      var count = Math.min(110, Math.round((width * height) / 11000));
+      var count = Math.min(small ? 55 : 110, Math.round((width * height) / (small ? 14000 : 11000)));
       particles = [];
       for (var i = 0; i < count; i += 1) particles.push(make_particle(true));
       if (still) draw();
     }
 
-    function draw() {
+    function draw(step) {
+      step = step || 1;
       context.clearRect(0, 0, width, height);
       particles.forEach(function (particle) {
         if (!still) {
-          particle.y -= particle.speed;
-          particle.sway += 0.01;
-          particle.glow += 0.02;
-          particle.x += Math.sin(particle.sway) * 0.15;
+          particle.y -= particle.speed * step;
+          particle.sway += 0.01 * step;
+          particle.glow += 0.02 * step;
+          particle.x += Math.sin(particle.sway) * 0.15 * step;
           if (particle.y < -10) {
             var fresh = make_particle(false);
             particle.x = fresh.x;
@@ -495,9 +498,17 @@
       });
     }
 
-    function loop() {
-      draw();
+    /* 30 fotogrammi al secondo bastano per un movimento così lento: metà
+       lavoro per il telefono. Il passo segue il tempo trascorso, così la
+       velocità resta uguale. La pagina nascosta ferma tutto da sola. */
+    var last = 0;
+    function loop(now) {
       window.requestAnimationFrame(loop);
+      if (!last) last = now;
+      var elapsed = now - last;
+      if (elapsed < 33) return;
+      last = now;
+      draw(Math.min(elapsed / 16.67, 4));
     }
 
     resize();

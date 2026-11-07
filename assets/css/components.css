@@ -1076,9 +1076,6 @@
   line-height: var(--line-height-small);
 }
 
-
-
-
 .project-card.is-hidden {
   display: none;
 }
@@ -1464,11 +1461,6 @@
 
 /* Il paragrafo-guida sopra le fasce orarie di risposta (contatti.html):
    stesso trattamento delle altre intro, centrato sulla pagina. */
-#tempi > .container > .text-lead {
-  max-width: 60ch;
-  margin-inline: auto;
-  text-align: center;
-}
 
 /* Modificatore riusabile per le note di chiusura fuori da una sezione con
    id proprio (dove non ha senso un selettore per id). */
