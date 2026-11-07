@@ -691,61 +691,6 @@
   text-align: center;
 }
 
-/* Rende animabile la quota di schizzo visibile (dove non è supportato,
-   il passaggio è semplicemente istantaneo). */
-@property --reveal-pct {
-  syntax: "<percentage>";
-  inherits: true;
-  initial-value: 0%;
-}
-
-/* Niente bordo/angoli/ombra da "screenshot in una card" (D89): l'immagine
-   riempie la sua colonna come un visual vero, non un riquadro-prodotto. */
-.hero__reveal-stage {
-  position: relative;
-  overflow: hidden;
-  aspect-ratio: 8 / 5;
-  background-color: var(--color-surface);
-  border: var(--border-width-hairline) solid var(--color-border);
-  border-radius: var(--radius-soft);
-  box-shadow: var(--shadow-lift);
-  --reveal-pct: 0%;
-  /* Il passaggio schizzo -> sito vero scorre da sinistra (vedi @property). */
-  transition: --reveal-pct 1100ms cubic-bezier(0.65, 0, 0.35, 1);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .hero__reveal-stage {
-    transition: none;
-  }
-}
-
-.hero__reveal-final {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
-}
-
-.hero__reveal-sketch {
-  position: absolute;
-  inset: 0;
-  clip-path: inset(0 calc(100% - var(--reveal-pct)) 0 0);
-}
-
-.hero__reveal-sketch-svg {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-@media (scripting: none) {
-  .hero__reveal-sketch {
-    display: none;
-  }
-}
-
 /* ==========================================================================
    Hero delle pagine interne: la stessa firma della home, senza ripeterla
    ========================================================================== */
@@ -2299,4 +2244,121 @@ html:has(.scene-bg) {
 
 .night main ::placeholder {
   color: rgba(255, 255, 255, 0.55);
+}
+
+/* ==========================================================================
+   Menu da telefono e tablet, versione compatta (novembre 2026)
+   Non più un pannello a tutto schermo: una tendina che scende dalla barra
+   in alto, con la stessa forma arrotondata. Voci di misura normale, la
+   pagina in cui sei evidenziata, sotto WhatsApp e Chiama. Il comportamento
+   (apri, chiudi, Esc, fuoco) resta quello di main.js.
+   ========================================================================== */
+.site-header__panel {
+  top: calc(100% + 0.5rem);
+  right: 0;
+  left: auto;
+  width: 100%;
+  height: auto;
+  max-height: calc(100dvh - 6rem);
+  gap: var(--space-small);
+  padding: var(--space-small) var(--space-small) var(--space-small);
+  background: #14155a;
+  border: var(--border-width-hairline) solid rgba(255, 255, 255, 0.14);
+  border-radius: 1.5rem;
+  box-shadow: 0 24px 60px rgba(3, 4, 30, 0.6);
+  opacity: 0;
+  transform: translateY(-0.5rem) scale(0.98);
+  transform-origin: top center;
+  transition:
+    opacity 0.2s var(--ease-out),
+    transform 0.25s var(--ease-out),
+    visibility 0s linear 0.25s;
+}
+
+.site-header__panel.is-open {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity 0.2s var(--ease-out),
+    transform 0.25s var(--ease-out),
+    visibility 0s;
+}
+
+@media (min-width: 48em) {
+  .site-header__panel {
+    top: calc(100% + 0.5rem);
+    width: 22rem;
+    border-radius: 1.5rem;
+  }
+}
+
+/* Testa: solo "Menu" e la X, il logo è già nella barra sopra */
+.site-header__panel-head { min-height: 2.75rem; padding-left: 0.5rem; }
+.site-header__panel-brand { display: none; }
+.site-header__panel-head::before {
+  content: "Menu";
+  color: rgba(255, 255, 255, 0.7);
+  font-size: var(--font-size-label);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-label);
+}
+.site-header__close { width: 2.75rem; height: 2.75rem; border-width: var(--border-width-hairline); border-color: rgba(255, 255, 255, 0.35); }
+.site-header__panel-label { display: none; }
+
+/* Voci */
+.site-header__panel-list { gap: 0.25rem; border-top: 0; }
+.site-header__panel-link {
+  display: flex;
+  align-items: center;
+  min-height: 3.25rem;
+  padding: 0.75rem 2.75rem 0.75rem 0.85rem;
+  border-bottom: 0;
+  border-radius: 0.9rem;
+}
+.site-header__panel-name {
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+}
+.site-header__panel-hint { display: none; }
+.site-header__panel-link::after {
+  content: "›";
+  right: 0.85rem;
+  width: auto;
+  height: auto;
+  border: 0;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.5);
+}
+.site-header__panel-link:hover,
+.site-header__panel-link:active {
+  padding-left: 0.85rem;
+  background-color: rgba(255, 255, 255, 0.07);
+  color: #FFFFFF;
+}
+.site-header__panel-link.is-current {
+  background-color: rgba(127, 200, 216, 0.16);
+}
+.site-header__panel-link.is-current .site-header__panel-name { color: #9fd8e4; }
+.site-header__panel-link.is-current::after {
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #7FC8D8;
+  border-radius: 50%;
+}
+
+/* In fondo: i due contatti, separati da una riga sottile */
+.site-header__panel-foot {
+  margin-top: var(--space-2xsmall);
+  padding-top: var(--space-small);
+  border-top: var(--border-width-hairline) solid rgba(255, 255, 255, 0.14);
+}
+
+/* Le voci appaiono insieme alla tendina: niente ingresso una per una */
+@media (prefers-reduced-motion: no-preference) {
+  .site-header__panel.is-open .site-header__panel-list li,
+  .site-header__panel.is-open .site-header__panel-foot { animation: none; }
 }

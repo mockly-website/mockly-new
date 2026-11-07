@@ -16,58 +16,6 @@
   }
 
   /* ------------------------------------------------------------------ *
-   * Hero: lo schizzo e il sito vero si alternano da soli, ogni 4,5 secondi.
-   * Nessun clic, nessun trascinamento, nessuno scroll: basta guardare.
-   * `--reveal-pct` è la quota di schizzo visibile (100% = tutto schizzo,
-   * 0% = tutto sito vero); il CSS la anima con un passaggio da sinistra.
-   * Con "riduci movimento" non c'è alternanza: si vede il sito vero.
-   * ------------------------------------------------------------------ */
-
-  function init_hero_reveal() {
-    var stage = document.querySelector("[data-reveal-stage]");
-    if (!stage) return;
-
-    var states = document.querySelectorAll("[data-reveal-state]");
-    var showing_sketch = true;
-    var timer = null;
-
-    function show(sketch) {
-      showing_sketch = sketch;
-      stage.style.setProperty("--reveal-pct", sketch ? "100%" : "0%");
-      Array.prototype.forEach.call(states, function (el) {
-        el.classList.toggle("is-active", (el.getAttribute("data-reveal-state") === "sketch") === sketch);
-      });
-    }
-
-    if (prefers_reduced_motion()) {
-      show(false);
-      return;
-    }
-
-    function start() {
-      if (timer === null) {
-        timer = window.setInterval(function () {
-          show(!showing_sketch);
-        }, 4500);
-      }
-    }
-
-    function stop() {
-      window.clearInterval(timer);
-      timer = null;
-    }
-
-    show(true);
-    start();
-
-    /* Scheda in secondo piano: si ferma, così non riparte "a scatti". */
-    document.addEventListener("visibilitychange", function () {
-      if (document.hidden) stop();
-      else start();
-    });
-  }
-
-  /* ------------------------------------------------------------------ *
    * Menu su telefono: apertura, chiusura, Esc, fuoco confinato
    * ------------------------------------------------------------------ */
 
@@ -663,7 +611,6 @@
   init_back_to_top();
   init_shopfront();
   init_reveal();
-  init_hero_reveal();
   init_mobile_menu();
   init_accordions();
   init_project_filters();

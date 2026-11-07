@@ -7,7 +7,6 @@
   var body = document.body;
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  function clamp(value) { return Math.max(0, Math.min(1, value)); }
 
   /* ---- Entrata delle schermate ---------------------------------------- */
   var scenes = Array.prototype.slice.call(document.querySelectorAll("[data-scene]"));
@@ -60,27 +59,8 @@
     }
   }
 
-  /* ---- La schermata dei quattro passi --------------------------------- */
-  var pin = document.querySelector("[data-pin]");
-  var stage = pin && pin.querySelector(".hero__reveal-stage");
-  var steps = pin ? Array.prototype.slice.call(pin.querySelectorAll(".pin__step")) : [];
-  var bars = pin ? Array.prototype.slice.call(pin.querySelectorAll(".pin__bar span")) : [];
-  var last_step = -1;
-
   function update() {
     var viewport = window.innerHeight;
-    if (pin && stage) {
-      var box = pin.getBoundingClientRect();
-      var progress = reduce ? 1 : clamp(-box.top / Math.max(1, box.height - viewport));
-      /* lo schizzo lascia il posto al sito vero */
-      stage.style.setProperty("--reveal-pct", (100 - progress * 100).toFixed(1) + "%");
-      var index = Math.round(progress * (steps.length - 1));
-      if (index !== last_step) {
-        last_step = index;
-        steps.forEach(function (el, i) { el.classList.toggle("is-active", reduce || i === index); });
-        bars.forEach(function (el, i) { el.classList.toggle("is-on", i <= index); });
-      }
-    }
 
     /* quale schermata è al centro dello schermo */
     var current = 0;

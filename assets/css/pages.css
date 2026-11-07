@@ -1007,3 +1007,13 @@
   border-radius: 999px;
   color: rgba(255, 255, 255, 0.82);
 }
+
+/* ---- Moki, la mascotte, sopra il titolo di 404 e grazie ---------------- */
+.hero__moki {
+  display: block;
+  width: clamp(7rem, 5rem + 6vw, 10rem);
+  height: auto;
+  margin: 0 auto var(--space-medium);
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px rgba(127, 200, 216, 0.25), 0 24px 50px rgba(0, 0, 0, 0.4);
+}
