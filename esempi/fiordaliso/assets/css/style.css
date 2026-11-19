@@ -494,9 +494,28 @@ html.book-on .bq-end__plate { align-items: center; }
 html.book-on .bq-end__plate img { width: auto; max-width: 70%; height: 80%; }
 html.book-on .demo-note { padding: 22px 40px; }
 .flip[hidden] { display: none; }
-html.book-on .flip { position: fixed; z-index: 35; left: 50%; bottom: 8px; transform: translateX(-50%); display: flex; align-items: center; gap: 14px; color: var(--on-board); font-size: 1rem; }
-.flip button { min-height: 44px; padding: 0 12px; text-decoration: underline; }
-.flip button:disabled { opacity: .35; text-decoration: none; cursor: default; }
+/* Comandi del libro (da computer): frecce tonde ai lati, pallini dei fogli in basso */
+html.book-on .flip { position: fixed; z-index: 35; inset: 64px 0 0; pointer-events: none; display: block; color: var(--ink); }
+.flip button {
+  pointer-events: auto; position: absolute; top: 50%; translate: 0 -50%;
+  width: 48px; height: 48px; border-radius: 50%; font-size: 0;
+  background: var(--paper); color: var(--ink); box-shadow: 0 6px 22px rgba(0, 0, 0, .35);
+  display: grid; place-items: center; transition: background .2s, color .2s, scale .12s, opacity .2s;
+}
+.flip button::before { font: 400 1.5rem/1 var(--serif); }
+.flip [data-flip="-1"] { left: 8px; }
+.flip [data-flip="-1"]::before { content: "\2190"; }
+.flip [data-flip="1"] { right: 8px; }
+.flip [data-flip="1"]::before { content: "\2192"; }
+.flip button:hover { background: var(--season); color: var(--paper); }
+.flip button:active { scale: .92; }
+.flip button:focus-visible { outline: 3px solid var(--on-board); outline-offset: 3px; }
+.flip button:disabled { opacity: 0; pointer-events: none; }
+.flip [data-flip-pos] { position: absolute; left: 50%; bottom: 12px; translate: -50% 0; display: flex; gap: 8px; }
+.flip__dot { width: 8px; height: 8px; border-radius: 50%; background: var(--on-board-soft); opacity: .45; transition: width .25s var(--ease), opacity .25s; }
+.flip__dot.is-on { width: 26px; border-radius: 4px; opacity: 1; background: var(--on-board); }
+@media (min-width: 1280px) { .flip button { width: 56px; height: 56px; } .flip [data-flip="-1"] { left: 32px; } .flip [data-flip="1"] { right: 32px; } }
+.flip__sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 html.book-on .book { margin-bottom: 26px; }
 
 /* Con la tastiera aperta l'anteprima non ruba lo schermo */
@@ -527,3 +546,11 @@ html.book-on .book { margin-bottom: 26px; }
 .demo-note__nav { display: flex; flex-wrap: wrap; gap: 0 22px; margin-bottom: 10px; }
 /* Senza JavaScript: niente menu da aprire e niente conto alla rovescia vuoto */
 html:not(.js) .menu-btn, html:not(.js) .pager, html:not(.js) .pause { display: none; }
+
+/* Revisione 19/11/2026: a 320 px le tre taglie stavano strette */
+@media (max-width: 360px) {
+  .sizes { gap: 6px; }
+  .size { min-width: 0; padding-inline: 2px; }
+  .size b { font-size: 1.15rem; }
+  .size small { font-size: .875rem; }
+}

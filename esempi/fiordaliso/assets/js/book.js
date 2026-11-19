@@ -65,7 +65,9 @@
     }
     if (flipNav) {
       var n = Math.round(at.p);
-      flipNav.querySelector("[data-flip-pos]").textContent = "Foglio " + (n + 1) + " di " + pairs.length;
+      var pos = flipNav.querySelector("[data-flip-pos]");
+      pos.innerHTML = pairs.map(function (_, i) { return '<i class="flip__dot' + (i === n ? ' is-on' : '') + '"></i>'; }).join("") +
+        '<span class="flip__sr">Foglio ' + (n + 1) + ' di ' + pairs.length + '</span>';
       flipNav.querySelector('[data-flip="-1"]').disabled = n === 0;
       flipNav.querySelector('[data-flip="1"]').disabled = n === pairs.length - 1;
     }
