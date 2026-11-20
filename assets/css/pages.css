@@ -974,13 +974,77 @@
 }
 
 
-/* Squadra: cosa sa fare ognuno, in piccole etichette. */
+/* ---- Squadra (chi-siamo): una scheda per persona ------------------------ */
+/* Riquadro tenue, in alto iniziale + nome + ruolo affiancati, poi chi è,
+   cosa fa, le etichette di cosa sa fare e i profili in fondo. Testo a
+   sinistra: sono paragrafi da leggere. Una colonna fino a 64em, poi tre. */
+
+.night main:not(#_) .card-grid--team {
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-medium);
+  max-width: 44rem;
+  margin-inline: auto;
+}
+
+.night main:not(#_) .card-grid--team .person-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--space-xsmall);
+  padding: var(--space-medium);
+  background-color: rgba(255, 255, 255, 0.045);
+  border: 1px solid var(--p-line);
+  border-radius: 22px;
+  text-align: left;
+}
+
+.night main:not(#_) .person-card__head {
+  display: flex;
+  align-items: center;
+  gap: var(--space-small);
+  margin-bottom: var(--space-2xsmall);
+  padding-bottom: var(--space-small);
+  border-bottom: 1px solid var(--p-line);
+}
+
+.night main:not(#_) .card-grid--team .person-card__avatar {
+  flex: none;
+  width: 4.5rem;
+  height: 4.5rem;
+  margin: 0;
+  border: 0;
+  box-shadow: 0 0 0 3px rgba(127, 200, 216, 0.25);
+  font-size: 2.6rem;
+}
+
+.night main:not(#_) .card-grid--team .person-card__name {
+  margin: 0;
+  font-size: clamp(1.6rem, 1.3rem + 1vw, 2rem);
+  line-height: 1.05;
+}
+
+.night main:not(#_) .card-grid--team .person-card__role {
+  margin: 0.25rem 0 0;
+}
+
+.night main:not(#_) .card-grid--team .person-card__text {
+  max-width: none;
+  margin: 0;
+  text-align: left;
+}
+
+.person-card__label {
+  margin: var(--space-xsmall) 0 0;
+  color: var(--p-sky);
+  font-size: var(--font-size-label);
+  font-weight: var(--font-weight-bold);
+}
+
 .person-card__skills {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 0.4rem;
-  margin: var(--space-xsmall) 0 0;
+  margin: 0;
   padding: 0;
   list-style: none;
 }
@@ -993,4 +1057,32 @@
   color: #DFF3F7;
   font-size: var(--font-size-label);
   font-weight: var(--font-weight-bold);
+}
+
+.night main:not(#_) .card-grid--team .person-card__link-list {
+  justify-content: flex-start;
+  gap: var(--space-small);
+  margin-top: auto;
+  padding-top: var(--space-xsmall);
+  border-top: 1px solid var(--p-line);
+}
+
+.night main:not(#_) .card-grid--team .person-card__link-list a {
+  padding-inline: 0;
+}
+
+@media (min-width: 64em) {
+  .night main:not(#_) .card-grid--team {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: none;
+  }
+
+  .night main:not(#_) .person-card__label {
+    margin-top: auto;
+    padding-top: var(--space-xsmall);
+  }
+
+  .night main:not(#_) .card-grid--team .person-card__link-list {
+    margin-top: var(--space-xsmall);
+  }
 }
