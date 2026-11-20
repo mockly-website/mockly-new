@@ -923,27 +923,6 @@
   color: var(--color-heading);
 }
 
-/* Pagina di un lavoro: una schermata grande del sito, con didascalia. */
-.case-shot {
-  max-width: 60rem;
-  margin: 0 auto;
-}
-
-.case-shot img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: var(--radius-soft);
-}
-
-.case-shot figcaption {
-  margin-top: var(--space-xsmall);
-  color: var(--color-text-muted);
-  font-size: var(--font-size-small);
-  text-align: center;
-}
-
 /* ---- Portfolio: lavori veri, etichetta leggera e bottoni separati ------- */
 
 .night .project-card__body .badge--real {
@@ -994,7 +973,3 @@
   box-shadow: 0 0 0 5px rgba(127, 200, 216, 0.25), 0 24px 50px rgba(0, 0, 0, 0.4);
 }
 
-/* Pagine dei lavori: l'immagine in cima non si attacca ai bottoni. */
-.night .hero .case-shot {
-  margin-top: var(--space-large);
-}

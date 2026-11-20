@@ -28,7 +28,7 @@
 
   <link rel="preload" href="assets/fonts/barlow-condensed-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/barlow-400.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/fonts.css?v=20261120c">
+  <link rel="stylesheet" href="assets/css/fonts.css?v=20261120d">
 
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" href="assets/img/logo-mockly-icon.svg" type="image/svg+xml">
@@ -38,10 +38,11 @@
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
 
-  <link rel="stylesheet" href="assets/css/tokens.css?v=20261120c">
-  <link rel="stylesheet" href="assets/css/base.css?v=20261120c">
-  <link rel="stylesheet" href="assets/css/components.css?v=20261120c">
-  <link rel="stylesheet" href="assets/css/pages.css?v=20261120c">
+  <link rel="stylesheet" href="assets/css/tokens.css?v=20261120d">
+  <link rel="stylesheet" href="assets/css/base.css?v=20261120d">
+  <link rel="stylesheet" href="assets/css/components.css?v=20261120d">
+  <link rel="stylesheet" href="assets/css/pages.css?v=20261120d">
+  <link rel="stylesheet" href="assets/css/case.css?v=20261120d">
 
   <script type="application/ld+json">
   {
@@ -123,141 +124,135 @@
     </div>
   </header>
 
-    <main id="contenuto">
+    <main id="contenuto" class="case">
 
-    <!-- ── Hero ─────────────────────────────────────────────────────── -->
-    <section class="hero hero--page">
-      <div class="container">
-        <h1 class="hero__title-page">Ovunque Accessibile</h1>
-        <p class="hero__text">
-          Angelo e Lorenzo, due ragazzi in carrozzina, volevano un posto dove sapere prima di uscire se un luogo va bene per chi lo deve raggiungere.
-          Noi abbiamo costruito il sito e la web-app.
-        </p>
-        <div class="hero__actions button-group button-group--stacked">
-          <a class="button button--secondary" href="https://mockly-website.github.io/ovunque-accessibile/" target="_blank" rel="noopener" aria-label="Apri il sito di Ovunque Accessibile in una nuova scheda">Apri il sito</a>
-          <a class="button button--secondary" href="https://mockly-website.github.io/ovunque-accessibile/app/" target="_blank" rel="noopener" aria-label="Apri la web-app di Ovunque Accessibile in una nuova scheda">Apri la web-app</a>
+    <!-- ── In cima: il lavoro dentro un computer e un telefono ─────── -->
+    <header class="case-hero">
+      <div class="container case-hero__grid">
+        <div class="case-hero__text">
+          <p class="case-hero__label">Lavoro reale · Sito e web-app</p>
+          <h1 class="case-hero__title">Ovunque Accessibile</h1>
+          <p class="case-hero__lead">Angelo e Lorenzo, due ragazzi in carrozzina, volevano un posto dove sapere prima di uscire se un luogo va bene per chi lo deve raggiungere. Noi abbiamo costruito il sito e la web-app.</p>
+          <div class="case-hero__actions">
+            <a class="button button--secondary" href="https://mockly-website.github.io/ovunque-accessibile/" target="_blank" rel="noopener" aria-label="Apri il sito di Ovunque Accessibile in una nuova scheda">Apri il sito</a>
+            <a class="button button--secondary" href="https://mockly-website.github.io/ovunque-accessibile/app/" target="_blank" rel="noopener" aria-label="Apri la web-app di Ovunque Accessibile in una nuova scheda">Apri la web-app</a>
+          </div>
         </div>
-        <div class="hero-phones" aria-hidden="true">
-          <span class="hero-phones__item"><img src="assets/img/projects/ovunque-accessibile-phone.webp" srcset="assets/img/projects/ovunque-accessibile-phone-300.webp 300w, assets/img/projects/ovunque-accessibile-phone.webp 520w" sizes="(min-width: 64em) 208px, 28vw" alt="" width="520" height="1125"></span>
-          <span class="hero-phones__item"><img src="assets/img/projects/ovunque-accessibile-scheda-phone.webp" srcset="assets/img/projects/ovunque-accessibile-scheda-phone-300.webp 300w, assets/img/projects/ovunque-accessibile-scheda-phone.webp 520w" sizes="(min-width: 64em) 208px, 28vw" alt="" width="520" height="1125"></span>
-          <span class="hero-phones__item"><img src="assets/img/projects/ovunque-accessibile-app-phone.webp" srcset="assets/img/projects/ovunque-accessibile-app-phone-300.webp 300w, assets/img/projects/ovunque-accessibile-app-phone.webp 520w" sizes="(min-width: 64em) 208px, 28vw" alt="" width="520" height="1125"></span>
+        <div class="case-hero__media">
+            <figure class="case-browser">
+              <span class="case-browser__bar" aria-hidden="true"><i></i><i></i><i></i><span>Ovunque Accessibile</span></span>
+              <img src="assets/img/projects/ovunque-accessibile-hero.webp" srcset="assets/img/projects/ovunque-accessibile-hero-400.webp 400w, assets/img/projects/ovunque-accessibile-hero-800.webp 800w, assets/img/projects/ovunque-accessibile-hero.webp 1440w" sizes="(min-width: 64em) 55vw, 92vw" alt="Il sito di Ovunque Accessibile da computer: la mappa dei luoghi con l'elenco a lato" width="1440" height="900">
+            </figure>
+            <figure class="case-phone"><img src="assets/img/projects/ovunque-accessibile-phone.webp" srcset="assets/img/projects/ovunque-accessibile-phone-300.webp 300w, assets/img/projects/ovunque-accessibile-phone.webp 520w" sizes="(min-width: 64em) 12vw, 26vw" alt="Il sito di Ovunque Accessibile visto da telefono" width="520" height="1125"></figure>
         </div>
       </div>
-    </section>
-
-    <!-- ── Il problema ──────────────────────────────────────────────── -->
-    <section class="section" id="problema">
       <div class="container">
-        <div class="section__header">
-          <h2 class="section__title section__title--wide">Da dove siamo partiti</h2>
-          <p class="section__intro">
-            &laquo;Accessibile&raquo; spesso non vuol dire niente: un gradino all'ingresso, un bagno non attrezzato, informazioni vecchie.
-            Angelo e Lorenzo volevano schede con dati concreti (rampe, ascensori, parcheggi, bagni, larghezza delle porte, gradini),
+        <dl class="case-facts">
+          <div><dt>Per</dt><dd>Angelo e Lorenzo</dd></div>
+          <div><dt>Cosa</dt><dd>Sito, web-app e pannello</dd></div>
+          <div><dt>Prima versione</dt><dd>In una settimana</dd></div>
+          <div><dt>Accessibilità</dt><dd>WCAG 2.2 livello AA</dd></div>
+        </dl>
+      </div>
+    </header>
+
+    <!-- ── Da dove siamo partiti ── -->
+    <section class="case-block" id="problema">
+      <div class="container case-block__grid">
+        <div class="case-block__head">
+          <h2>Da dove siamo partiti</h2>
+        </div>
+        <div class="case-block__body">
+          <p class="case-text">&laquo;Accessibile&raquo; spesso non vuol dire niente: un gradino all'ingresso, un bagno non attrezzato, informazioni vecchie.
+            Angelo e Lorenzo volevano <strong>schede con dati concreti</strong> (rampe, ascensori, parcheggi, bagni, larghezza delle porte, gradini),
             scritte da chi in quel posto ci è stato. Per chi si muove in carrozzina, per chi ha difficoltà a camminare,
-            per le persone anziane, per le famiglie con il passeggino e per chi li accompagna.
-          </p>
+            per le persone anziane, per le famiglie con il passeggino e per chi li accompagna.</p>
         </div>
       </div>
     </section>
 
-    <!-- ── Cosa abbiamo costruito ───────────────────────────────────── -->
-    <section class="section" id="cosa">
-      <div class="container">
-        <div class="section__header">
-          <h2 class="section__title section__title--wide">Cosa abbiamo costruito</h2>
-          <p class="section__intro">
-            Un pezzo alla volta, tutto sullo stesso archivio di dati: così l'app per gli store, quando arriverà, non dovrà rifare niente da capo.
-          </p>
+    <!-- ── Cosa abbiamo costruito ── -->
+    <section class="case-block" id="cosa">
+      <div class="container case-block__grid">
+        <div class="case-block__head">
+          <h2>Cosa abbiamo costruito</h2>
+          <p>Un pezzo alla volta, tutto sullo stesso archivio di dati: così l'app per gli store, quando arriverà, non dovrà rifare niente da capo.</p>
         </div>
-
-        <ol class="step-list">
-          <li class="step-list__item">
-            <div>
-              <h3 class="step-list__title">Una pagina di anteprima</h3>
-              <p class="step-list__text">Pubblicata subito, con il modulo per lasciare la propria email ed essere avvisati del lancio.</p>
-            </div>
-          </li>
-          <li class="step-list__item">
-            <div>
-              <h3 class="step-list__title">Il sito</h3>
-              <p class="step-list__text">
-                La mappa e l'elenco dei luoghi, la ricerca per città o nome, i filtri (ingresso, bagno, parcheggio), &laquo;Vicino a me&raquo;
-                e una scheda per ogni luogo con giudizio, misure, bagno, parcheggio, data dell'ultima verifica e indicazioni stradali.
-                Si consulta senza account.
-              </p>
-            </div>
-          </li>
-          <li class="step-list__item">
-            <div>
-              <h3 class="step-list__title">La web-app</h3>
-              <p class="step-list__text">
-                Si installa sul telefono direttamente dalla pagina, senza passare dagli store. Con un account si salvano i preferiti, si scrivono recensioni con domande guidate,
-                si segnalano luoghi nuovi o correzioni con le misure e fino a 5 foto.
-              </p>
-            </div>
-          </li>
-          <li class="step-list__item">
-            <div>
-              <h3 class="step-list__title">Il pannello per Angelo e Lorenzo</h3>
-              <p class="step-list__text">
-                Vedono la scheda com'è ora e com'è nella proposta, poi approvano o respingono con un motivo. Moderano recensioni e foto.
-              </p>
-            </div>
-          </li>
-        </ol>
+        <div class="case-block__body">
+          <ul class="case-cards case-cards--2">
+            <li><span class="case-cards__tag">Parte 1</span><h3>Una pagina di anteprima</h3><p>Pubblicata subito, con il modulo per lasciare la propria email ed essere avvisati del lancio.</p></li>
+            <li><span class="case-cards__tag">Parte 2</span><h3>Il sito</h3><p>Mappa ed elenco dei luoghi, ricerca per città o nome, filtri (ingresso, bagno, parcheggio), &laquo;Vicino a me&raquo; e una scheda per ogni luogo, con giudizio, misure e data dell'ultima verifica. Si consulta senza account.</p></li>
+            <li><span class="case-cards__tag">Parte 3</span><h3>La web-app</h3><p>Si installa sul telefono dalla pagina, senza passare dagli store. Con un account si salvano i preferiti, si scrivono recensioni con domande guidate e si segnalano luoghi nuovi con le misure e fino a 5 foto.</p></li>
+            <li><span class="case-cards__tag">Parte 4</span><h3>Il pannello per Angelo e Lorenzo</h3><p>Vedono la scheda com'è ora e com'è nella proposta, poi approvano o respingono con un motivo. Moderano recensioni e foto.</p></li>
+          </ul>
+        </div>
       </div>
     </section>
 
-    <!-- ── Una scheda ───────────────────────────────────────────────── -->
-    <section class="section" id="scheda">
-      <div class="container">
-        <div class="section__header">
-          <h2 class="section__title section__title--wide">Una scheda, da vicino</h2>
-          <p class="section__intro">
-            Il giudizio cambia in base all'esigenza scelta, e la scheda dice sempre da dove arriva l'informazione e quando è stata controllata.
-          </p>
+    <!-- ── Dal telefono ── -->
+    <section class="case-block case-block--wide" id="telefono">
+      <div class="container case-block__grid">
+        <div class="case-block__head">
+          <h2>Dal telefono</h2>
+          <p>Il sito e la web-app sono pensati prima di tutto per il telefono.</p>
         </div>
-        <figure class="case-shot">
-          <img src="assets/img/projects/ovunque-accessibile-scheda.webp" srcset="assets/img/projects/ovunque-accessibile-scheda-400.webp 400w, assets/img/projects/ovunque-accessibile-scheda-800.webp 800w, assets/img/projects/ovunque-accessibile-scheda.webp 1440w" sizes="(min-width: 64em) 60rem, 92vw"
-               alt="Scheda del Museo Archeologico Nazionale di Cagliari sul sito Ovunque Accessibile: giudizio per carrozzina manuale, ingresso e bagno accessibili, mappa a lato"
-               width="1440" height="900" loading="lazy">
-          <figcaption>La scheda del Museo Archeologico Nazionale di Cagliari, vista da computer.</figcaption>
-        </figure>
+        <div class="case-block__body">
+          <ul class="case-phones">
+            <li><figure class="case-phone"><img src="assets/img/projects/ovunque-accessibile-phone.webp" srcset="assets/img/projects/ovunque-accessibile-phone-300.webp 300w, assets/img/projects/ovunque-accessibile-phone.webp 520w" sizes="(min-width: 64em) 14vw, 28vw" alt="Pagina iniziale del sito da telefono" width="520" height="1125" loading="lazy"></figure><figcaption>La pagina iniziale</figcaption></li>
+            <li><figure class="case-phone"><img src="assets/img/projects/ovunque-accessibile-scheda-phone.webp" srcset="assets/img/projects/ovunque-accessibile-scheda-phone-300.webp 300w, assets/img/projects/ovunque-accessibile-scheda-phone.webp 520w" sizes="(min-width: 64em) 14vw, 28vw" alt="Scheda di un luogo da telefono" width="520" height="1125" loading="lazy"></figure><figcaption>La scheda di un luogo</figcaption></li>
+            <li><figure class="case-phone"><img src="assets/img/projects/ovunque-accessibile-app-phone.webp" srcset="assets/img/projects/ovunque-accessibile-app-phone-300.webp 300w, assets/img/projects/ovunque-accessibile-app-phone.webp 520w" sizes="(min-width: 64em) 14vw, 28vw" alt="La domanda Come ti muovi? nella web-app" width="520" height="1125" loading="lazy"></figure><figcaption>&laquo;Come ti muovi?&raquo;</figcaption></li>
+          </ul>
+        </div>
       </div>
     </section>
 
-    <!-- ── Le scelte ────────────────────────────────────────────────── -->
-    <section class="section" id="scelte">
-      <div class="container">
-        <div class="section__header">
-          <h2 class="section__title section__title--wide">Le scelte, e perché</h2>
+    <!-- ── Una scheda, da vicino ── -->
+    <section class="case-block" id="scheda">
+      <div class="container case-block__grid">
+        <div class="case-block__head">
+          <h2>Una scheda, da vicino</h2>
+          <p>Il giudizio cambia in base all'esigenza scelta, e la scheda dice sempre da dove arriva l'informazione e quando è stata controllata.</p>
         </div>
-
-        <ul class="feature-grid">
-          <li class="feature-grid__item"><strong>Un giudizio per ogni esigenza</strong> <span>carrozzina manuale, carrozzina elettrica, difficoltà a camminare, persona anziana: un luogo può andare bene per una e non per l'altra. Alla prima visita chiediamo &laquo;Come ti muovi?&raquo;.</span></li>
-          <li class="feature-grid__item"><strong>Si vede quanto è affidabile</strong> <span>&laquo;Verificato sul posto&raquo; o &laquo;Segnalato dalla community&raquo;; dopo 24 mesi la scheda diventa &laquo;da ricontrollare&raquo;.</span></li>
-          <li class="feature-grid__item"><strong>Niente pubblicato senza approvazione</strong> <span>segnalazioni, foto e recensioni escono solo dopo il sì di Angelo e Lorenzo.</span></li>
-          <li class="feature-grid__item"><strong>Foto rispettose</strong> <span>il telefono toglie la posizione GPS prima dell'invio, e ogni foto chiede una breve descrizione per chi non vede.</span></li>
-          <li class="feature-grid__item"><strong>Un sito che tutti possono usare</strong> <span>standard WCAG 2.2 livello AA: tastiera, lettori di schermo, testi ingrandibili, bottoni grandi, nessuna informazione affidata solo al colore. Pagine controllate con axe, zero errori.</span></li>
-          <li class="feature-grid__item"><strong>Il loro marchio, più leggibile</strong> <span>logo e colori di sempre; per i testi Atkinson Hyperlegible, un carattere pensato per chi vede poco, e Fredoka nei titoli al posto di Chalkboard SE, che su Android e Windows non c'è.</span></li>
-          <li class="feature-grid__item"><strong>I dati restano di chi li scrive</strong> <span>dal profilo si scaricano i propri dati e si elimina l'account; l'archivio sta in Europa.</span></li>
-        </ul>
+        <div class="case-block__body">
+          <div class="case-figure"><figure class="case-browser">
+              <span class="case-browser__bar" aria-hidden="true"><i></i><i></i><i></i><span>Museo Archeologico Nazionale di Cagliari</span></span>
+              <img src="assets/img/projects/ovunque-accessibile-scheda.webp" srcset="assets/img/projects/ovunque-accessibile-scheda-400.webp 400w, assets/img/projects/ovunque-accessibile-scheda-800.webp 800w, assets/img/projects/ovunque-accessibile-scheda.webp 1440w" sizes="(min-width: 64em) 58vw, 92vw" alt="Scheda del Museo Archeologico Nazionale di Cagliari sul sito Ovunque Accessibile: giudizio per carrozzina manuale, ingresso e bagno accessibili, mappa a lato" width="1440" height="900" loading="lazy">
+            </figure><figcaption>La scheda del Museo Archeologico Nazionale di Cagliari, vista da computer.</figcaption></div>
+        </div>
       </div>
     </section>
 
-    <!-- ── Tempi ────────────────────────────────────────────────────── -->
-    <section class="section" id="tempi-lavoro">
-      <div class="container container--narrow">
-        <div class="section__header">
-          <h2 class="section__title section__title--wide">Una settimana per provarlo</h2>
-          <p class="section__intro">
-            A una settimana dalla prima chiamata, sito e web-app erano già da provare dal telefono. Il lavoro continua insieme a loro:
-            i prossimi passi sono le pagine per Google di ogni luogo e l'app per Android.
-          </p>
+    <!-- ── Le scelte, e perché ── -->
+    <section class="case-block" id="scelte">
+      <div class="container case-block__grid">
+        <div class="case-block__head">
+          <h2>Le scelte, e perché</h2>
         </div>
-        <p class="push-medium">
-          <a class="button button--ghost" href="portfolio.html">Torna al portfolio</a>
-        </p>
+        <div class="case-block__body">
+          <ul class="case-cards case-cards--2">
+            <li><h3>Un giudizio per ogni esigenza</h3><p>Carrozzina manuale, carrozzina elettrica, difficoltà a camminare, persona anziana: un luogo può andare bene per una e non per l'altra. Alla prima visita chiediamo &laquo;Come ti muovi?&raquo;.</p></li>
+            <li><h3>Si vede quanto è affidabile</h3><p>&laquo;Verificato sul posto&raquo; o &laquo;Segnalato dalla community&raquo;; dopo 24 mesi la scheda diventa &laquo;da ricontrollare&raquo;.</p></li>
+            <li><h3>Niente pubblicato senza approvazione</h3><p>Segnalazioni, foto e recensioni escono solo dopo il sì di Angelo e Lorenzo.</p></li>
+            <li><h3>Foto rispettose</h3><p>Il telefono toglie la posizione GPS prima dell'invio, e ogni foto chiede una breve descrizione per chi non vede.</p></li>
+            <li><h3>Un sito che tutti possono usare</h3><p>Standard WCAG 2.2 livello AA: tastiera, lettori di schermo, testi ingrandibili, bottoni grandi, nessuna informazione affidata solo al colore. Pagine controllate con axe, zero errori.</p></li>
+            <li><h3>Il loro marchio, più leggibile</h3><p>Logo e colori di sempre; per i testi Atkinson Hyperlegible, un carattere pensato per chi vede poco, e Fredoka nei titoli al posto di Chalkboard SE, che su Android e Windows non c'è.</p></li>
+            <li><h3>I dati restano di chi li scrive</h3><p>Dal profilo si scaricano i propri dati e si elimina l'account; l'archivio sta in Europa.</p></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Una settimana per provarlo ── -->
+    <section class="case-block" id="tempi-lavoro">
+      <div class="container case-block__grid">
+        <div class="case-block__head">
+          <h2>Una settimana per provarlo</h2>
+        </div>
+        <div class="case-block__body">
+          <p class="case-text">A una settimana dalla prima chiamata, sito e web-app erano già da provare dal telefono. Il lavoro continua insieme a loro:
+            i prossimi passi sono le pagine per Google di ogni luogo e l'app per Android.</p>
+          <p class="case-back"><a class="button button--ghost" href="portfolio.html">Torna al portfolio</a></p>
+        </div>
       </div>
     </section>
 
@@ -342,7 +337,7 @@
     <svg class="back-to-top__icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 16V4m0 0 6 6m-6-6L4 10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </button>
 
-  <script src="assets/js/main.js?v=20261120c"></script>
+  <script src="assets/js/main.js?v=20261120d"></script>
 
 </body>
 </html>

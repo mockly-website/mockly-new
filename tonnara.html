@@ -28,7 +28,7 @@
 
   <link rel="preload" href="assets/fonts/barlow-condensed-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/barlow-400.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/fonts.css?v=20261120c">
+  <link rel="stylesheet" href="assets/css/fonts.css?v=20261120d">
 
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" href="assets/img/logo-mockly-icon.svg" type="image/svg+xml">
@@ -38,10 +38,11 @@
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
 
-  <link rel="stylesheet" href="assets/css/tokens.css?v=20261120c">
-  <link rel="stylesheet" href="assets/css/base.css?v=20261120c">
-  <link rel="stylesheet" href="assets/css/components.css?v=20261120c">
-  <link rel="stylesheet" href="assets/css/pages.css?v=20261120c">
+  <link rel="stylesheet" href="assets/css/tokens.css?v=20261120d">
+  <link rel="stylesheet" href="assets/css/base.css?v=20261120d">
+  <link rel="stylesheet" href="assets/css/components.css?v=20261120d">
+  <link rel="stylesheet" href="assets/css/pages.css?v=20261120d">
+  <link rel="stylesheet" href="assets/css/case.css?v=20261120d">
 
   <script type="application/ld+json">
   {
@@ -123,127 +124,105 @@
     </div>
   </header>
 
-    <main id="contenuto">
+    <main id="contenuto" class="case">
 
-    <!-- ── Hero ─────────────────────────────────────────────────────── -->
-    <section class="hero hero--page">
-      <div class="container">
-        <h1 class="hero__title-page">Tonnara di Flumentorgiu</h1>
-        <p class="hero__text">
-          Il sito del museo a cielo aperto della Tonnara di Flumentorgiu, sulla Costa Verde.
-          È nato come progetto di scuola: il sito l'ha costruito quasi tutto Noah, con l'aiuto di Adriano.
-        </p>
-        <div class="hero__actions button-group button-group--stacked">
-          <a class="button button--secondary" href="https://tonnaradiflumentorgiu.it" target="_blank" rel="noopener" aria-label="Apri il sito della Tonnara di Flumentorgiu in una nuova scheda">Apri il sito</a>
+    <!-- ── In cima: il lavoro dentro un computer e un telefono ─────── -->
+    <header class="case-hero">
+      <div class="container case-hero__grid">
+        <div class="case-hero__text">
+          <p class="case-hero__label">Lavoro reale · Sito e approfondimenti</p>
+          <h1 class="case-hero__title">Tonnara di Flumentorgiu</h1>
+          <p class="case-hero__lead">Il sito del museo a cielo aperto della Tonnara di Flumentorgiu, sulla Costa Verde. È nato come progetto di scuola: il sito l'ha costruito quasi tutto Noah, con l'aiuto di Adriano.</p>
+          <div class="case-hero__actions">
+            <a class="button button--secondary" href="https://tonnaradiflumentorgiu.it" target="_blank" rel="noopener" aria-label="Apri il sito della Tonnara di Flumentorgiu in una nuova scheda">Apri il sito</a>
+          </div>
         </div>
-        <figure class="case-shot">
-          <img src="assets/img/projects/tonnara-hero.webp" srcset="assets/img/projects/tonnara-hero-400.webp 400w, assets/img/projects/tonnara-hero-800.webp 800w, assets/img/projects/tonnara-hero.webp 1440w" sizes="(min-width: 64em) 60rem, 92vw"
-               alt="Pagina iniziale del sito della Tonnara di Flumentorgiu: il titolo sopra una foto della costa, con i tasti Come arrivarci e Museo a cielo aperto"
-               width="1440" height="900">
-          <figcaption>La pagina iniziale del sito, oggi.</figcaption>
-        </figure>
+        <div class="case-hero__media">
+            <figure class="case-browser">
+              <span class="case-browser__bar" aria-hidden="true"><i></i><i></i><i></i><span>tonnaradiflumentorgiu.it</span></span>
+              <img src="assets/img/projects/tonnara-hero.webp" srcset="assets/img/projects/tonnara-hero-400.webp 400w, assets/img/projects/tonnara-hero-800.webp 800w, assets/img/projects/tonnara-hero.webp 1440w" sizes="(min-width: 64em) 55vw, 92vw" alt="Pagina iniziale del sito della Tonnara di Flumentorgiu: il titolo sopra una foto della costa, con i tasti Come arrivarci e Museo a cielo aperto" width="1440" height="900">
+            </figure>
+            <figure class="case-phone"><img src="assets/img/projects/tonnara-phone.webp" srcset="assets/img/projects/tonnara-phone-300.webp 300w, assets/img/projects/tonnara-phone.webp 520w" sizes="(min-width: 64em) 12vw, 26vw" alt="Il sito della Tonnara visto da telefono" width="520" height="1125"></figure>
+        </div>
       </div>
-    </section>
-
-    <!-- ── Da dove siamo partiti ────────────────────────────────────── -->
-    <section class="section" id="partenza">
       <div class="container">
-        <div class="section__header">
-          <h2 class="section__title section__title--wide">Da dove siamo partiti</h2>
-          <p class="section__intro">
-            Lo scopo era far conoscere la Tonnara di Flumentorgiu, un luogo importante per la storia della Sardegna.
+        <dl class="case-facts">
+          <div><dt>Per</dt><dd>Associazione Porto Palma</dd></div>
+          <div><dt>Cosa</dt><dd>Sito e 10 approfondimenti</dd></div>
+          <div><dt>Lingue</dt><dd>Italiano e inglese</dd></div>
+          <div><dt>Chi</dt><dd>Noah, con Adriano</dd></div>
+        </dl>
+      </div>
+    </header>
+
+    <!-- ── Da dove siamo partiti ── -->
+    <section class="case-block" id="partenza">
+      <div class="container case-block__grid">
+        <div class="case-block__head">
+          <h2>Da dove siamo partiti</h2>
+        </div>
+        <div class="case-block__body">
+          <p class="case-text">Lo scopo era <strong>far conoscere la Tonnara di Flumentorgiu</strong>, un luogo importante per la storia della Sardegna.
             Al progetto hanno lavorato due classi: una ha curato la parte storica, l'altra (la nostra) il sito.
-            Testi e immagini vengono dal libro sulla storia della Tonnara di Francesca Trebino, Paola Usai e dell'Associazione Porto Palma.
-          </p>
+            Testi e immagini vengono dal libro sulla storia della Tonnara di Francesca Trebino, Paola Usai e dell'Associazione Porto Palma.</p>
         </div>
       </div>
     </section>
 
-    <!-- ── Come l'abbiamo costruito ─────────────────────────────────── -->
-    <section class="section" id="cosa">
-      <div class="container">
-        <div class="section__header">
-          <h2 class="section__title section__title--wide">Come l'abbiamo costruito</h2>
-          <p class="section__intro">Un passo alla volta, imparando strada facendo.</p>
+    <!-- ── Come l'abbiamo costruito ── -->
+    <section class="case-block" id="cosa">
+      <div class="container case-block__grid">
+        <div class="case-block__head">
+          <h2>Come l'abbiamo costruito</h2>
+          <p>Un passo alla volta, imparando strada facendo.</p>
         </div>
-
-        <ol class="step-list">
-          <li class="step-list__item">
-            <div>
-              <h3 class="step-list__title">Capire il luogo</h3>
-              <p class="step-list__text">Noah ha raccolto tutto quello che si trovava su internet sulla Tonnara e ha deciso che tipo di sito serviva.</p>
-            </div>
-          </li>
-          <li class="step-list__item">
-            <div>
-              <h3 class="step-list__title">La bozza su carta</h3>
-              <p class="step-list__text">Prima del codice, qualche foglio a quadretti: la pagina iniziale da computer e da telefono, e la pagina di un approfondimento con l'audioguida.</p>
-            </div>
-          </li>
-          <li class="step-list__item">
-            <div>
-              <h3 class="step-list__title">La prima versione</h3>
-              <p class="step-list__text">Solo i contenuti, in HTML, con un po' di stile: ancora senza un'identità sua e senza animazioni.</p>
-            </div>
-          </li>
-          <li class="step-list__item">
-            <div>
-              <h3 class="step-list__title">Animazioni, correzioni e telefono</h3>
-              <p class="step-list__text">Poi le prime animazioni e la versione per telefono. Gli errori li abbiamo sistemati insieme ad Adriano, aiutandoci con Claude, un'intelligenza artificiale.</p>
-            </div>
-          </li>
-          <li class="step-list__item">
-            <div>
-              <h3 class="step-list__title">Pubblicazione e Google</h3>
-              <p class="step-list__text">Quando l'associazione ha preso il nome del sito e lo spazio web, l'abbiamo pubblicato, anche se non era finito, e abbiamo lavorato per farlo trovare su Google.</p>
-            </div>
-          </li>
-          <li class="step-list__item">
-            <div>
-              <h3 class="step-list__title">Dieci approfondimenti</h3>
-              <p class="step-list__text">Con i testi preparati dall'altra classe abbiamo costruito dieci pagine di approfondimento, che si aprono solo sul posto con un QR code.</p>
-            </div>
-          </li>
-        </ol>
+        <div class="case-block__body">
+          <ol class="case-timeline">
+            <li><h3>Capire il luogo</h3><p>Noah ha raccolto tutto quello che si trovava su internet sulla Tonnara e ha deciso che tipo di sito serviva.</p></li>
+            <li><h3>La bozza su carta</h3><p>Prima del codice, qualche foglio a quadretti: la pagina iniziale da computer e da telefono, e la pagina di un approfondimento con l'audioguida.</p></li>
+            <li><h3>La prima versione</h3><p>Solo i contenuti, in HTML, con un po' di stile: ancora senza un'identità sua e senza animazioni.</p></li>
+            <li><h3>Animazioni, correzioni e telefono</h3><p>Poi le prime animazioni e la versione per telefono. Gli errori li abbiamo sistemati insieme ad Adriano, aiutandoci con Claude, un'intelligenza artificiale.</p></li>
+            <li><h3>Pubblicazione e Google</h3><p>Quando l'associazione ha preso il nome del sito e lo spazio web, l'abbiamo pubblicato, anche se non era finito, e abbiamo lavorato per farlo trovare su Google.</p></li>
+            <li><h3>Dieci approfondimenti</h3><p>Con i testi preparati dall'altra classe abbiamo costruito dieci pagine di approfondimento, che si aprono solo sul posto con un QR code.</p></li>
+          </ol>
+        </div>
       </div>
     </section>
 
-    <!-- ── La bozza ─────────────────────────────────────────────────── -->
-    <section class="section" id="bozza">
-      <div class="container">
-        <div class="section__header">
-          <h2 class="section__title section__title--wide">Dalla bozza al sito</h2>
-          <p class="section__intro">I fogli di partenza e la prima versione, accanto a quella di oggi.</p>
+    <!-- ── Dalla bozza al sito ── -->
+    <section class="case-block case-block--wide" id="bozza">
+      <div class="container case-block__grid">
+        <div class="case-block__head">
+          <h2>Dalla bozza al sito</h2>
+          <p>I fogli di partenza, la prima versione e quella dopo i primi miglioramenti.</p>
         </div>
-        <figure class="case-shot">
-          <img src="assets/img/projects/tonnara-bozza.webp" srcset="assets/img/projects/tonnara-bozza-800.webp 800w, assets/img/projects/tonnara-bozza.webp 1690w" sizes="(min-width: 64em) 60rem, 92vw"
-               alt="Bozze su fogli a quadretti: la pagina iniziale con logo, menu, titolo e due pulsanti, la versione da telefono e la pagina di un approfondimento con audioguida e foto"
-               width="1690" height="1170" loading="lazy">
-          <figcaption>La bozza su carta: pagina iniziale, telefono e approfondimento.</figcaption>
-        </figure>
-        <figure class="case-shot">
-          <img src="assets/img/projects/tonnara-prima-versione.webp" srcset="assets/img/projects/tonnara-prima-versione-800.webp 800w, assets/img/projects/tonnara-prima-versione.webp 1510w" sizes="(min-width: 64em) 60rem, 92vw"
-               alt="A sinistra la prima versione del sito, grigia e senza immagini; a destra la versione con la foto del mare e il titolo Tonnara di Flumentorgiu"
-               width="1510" height="1160" loading="lazy">
-          <figcaption>La prima versione, solo contenuti, e quella dopo i primi miglioramenti.</figcaption>
-        </figure>
+        <div class="case-block__body">
+          <div class="case-gallery">
+            <div class="case-figure">
+              <figure class="case-paper"><img src="assets/img/projects/tonnara-bozza.webp" srcset="assets/img/projects/tonnara-bozza-800.webp 800w, assets/img/projects/tonnara-bozza.webp 1690w" sizes="(min-width: 64em) 45vw, 92vw" alt="Bozze su fogli a quadretti: la pagina iniziale con logo, menu, titolo e due pulsanti, la versione da telefono e la pagina di un approfondimento con audioguida e foto" width="1690" height="1170" loading="lazy"></figure>
+              <figcaption>La bozza su carta: pagina iniziale, telefono e approfondimento.</figcaption>
+            </div>
+            <div class="case-figure">
+              <figure class="case-paper"><img src="assets/img/projects/tonnara-prima-versione.webp" srcset="assets/img/projects/tonnara-prima-versione-800.webp 800w, assets/img/projects/tonnara-prima-versione.webp 1510w" sizes="(min-width: 64em) 45vw, 92vw" alt="A sinistra la prima versione del sito, grigia e senza immagini; a destra la versione con la foto del mare e il titolo Tonnara di Flumentorgiu" width="1510" height="1160" loading="lazy"></figure>
+              <figcaption>La prima versione, solo contenuti, e quella dopo i primi miglioramenti.</figcaption>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- ── Sul posto ────────────────────────────────────────────────── -->
-    <section class="section" id="tempi-lavoro">
-      <div class="container container--narrow">
-        <div class="section__header">
-          <h2 class="section__title section__title--wide">Anche sul posto</h2>
-          <p class="section__intro">
-            Durante il lavoro ci sono stati diversi incontri con persone che ci hanno aiutato a capire i testi e il progetto.
-            L'ultimo è stato una gita alla Tonnara con le due classi. Oggi il sito è finito, in italiano e in inglese,
-            e quando ci viene in mente qualcosa da migliorare lo aggiungiamo.
-          </p>
+    <!-- ── Anche sul posto ── -->
+    <section class="case-block" id="tempi-lavoro">
+      <div class="container case-block__grid">
+        <div class="case-block__head">
+          <h2>Anche sul posto</h2>
         </div>
-        <p class="push-medium">
-          <a class="button button--ghost" href="portfolio.html">Torna al portfolio</a>
-        </p>
+        <div class="case-block__body">
+          <p class="case-text">Durante il lavoro ci sono stati diversi incontri con persone che ci hanno aiutato a capire i testi e il progetto.
+            L'ultimo è stato <strong>una gita alla Tonnara con le due classi</strong>. Oggi il sito è finito, in italiano e in inglese,
+            e quando ci viene in mente qualcosa da migliorare lo aggiungiamo.</p>
+          <p class="case-back"><a class="button button--ghost" href="portfolio.html">Torna al portfolio</a></p>
+        </div>
       </div>
     </section>
 
@@ -328,7 +307,7 @@
     <svg class="back-to-top__icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 16V4m0 0 6 6m-6-6L4 10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </button>
 
-  <script src="assets/js/main.js?v=20261120c"></script>
+  <script src="assets/js/main.js?v=20261120d"></script>
 
 </body>
 </html>
