@@ -399,13 +399,13 @@
    alto, il foro e lo spago. Da computer pendono tutti dalla stessa asta. */
 
 .night .card-grid:has(.price-card) {
-  gap: 4.5rem var(--space-medium);
-  padding-top: 3rem;
+  gap: 3.5rem var(--space-medium);
+  padding-top: 2.25rem;
 }
 
 .night .price-card {
   position: relative;
-  padding: 3.5rem var(--space-medium) var(--space-large);
+  padding: 2.6rem var(--space-medium) var(--space-medium);
   background:
     linear-gradient(135deg, transparent 1.5rem, #fff 0) top left / 50.5% 100% no-repeat,
     linear-gradient(225deg, transparent 1.5rem, #fff 0) top right / 50.5% 100% no-repeat;
@@ -419,10 +419,10 @@
 .night .price-card::before {
   content: "";
   position: absolute;
-  bottom: calc(100% - 1.6rem);
+  bottom: calc(100% - 1.4rem);
   left: 50%;
   width: 2px;
-  height: 4.6rem;
+  height: 3.6rem;
   margin-left: -1px;
   background-color: rgba(255, 255, 255, 0.75);
 }
@@ -431,11 +431,11 @@
 .night .price-card::after {
   content: "";
   position: absolute;
-  top: 1.1rem;
+  top: 0.9rem;
   left: 50%;
-  width: 1.1rem;
-  height: 1.1rem;
-  margin-left: -0.55rem;
+  width: 1rem;
+  height: 1rem;
+  margin-left: -0.5rem;
   background-color: var(--p-ink);
   border: 3px solid var(--p-sky);
   border-radius: var(--radius-pill);
@@ -443,7 +443,7 @@
 
 .night .price-card__plan {
   color: var(--p-ink);
-  font-size: clamp(2.2rem, 1.6rem + 2vw, 3.25rem);
+  font-size: clamp(1.9rem, 1.5rem + 1.2vw, 2.4rem);
   font-weight: var(--font-weight-bold);
   letter-spacing: 0;
   line-height: 1;
@@ -451,49 +451,26 @@
 }
 
 .night .price-card__price {
-  margin-bottom: var(--space-medium);
-  padding-bottom: var(--space-small);
+  margin-bottom: var(--space-small);
+  padding-bottom: var(--space-xsmall);
   border-bottom: 2px dashed rgba(22, 23, 79, 0.3);
   color: #2070A1;
   font-family: var(--font-heading);
-  font-size: clamp(1.9rem, 1.5rem + 1.2vw, 2.4rem);
+  font-size: clamp(1.6rem, 1.35rem + 0.8vw, 2rem);
   font-weight: var(--font-weight-bold);
   line-height: 1.1;
   text-align: center;
 }
 
 .night .price-card__include-list {
-  gap: var(--space-xsmall);
+  gap: var(--space-2xsmall);
   margin-bottom: 0;
-  font-size: var(--font-size-body);
+  font-size: var(--font-size-small);
+  line-height: 1.4;
 }
 
 .night .price-card__include::before {
   color: #2070A1;
-}
-
-/* "Il più scelto": un cartello storto, con una riga a strisce in cima. */
-.night .price-card__badge {
-  position: absolute;
-  top: -1rem;
-  right: 0.5rem;
-  z-index: 1;
-  margin: 0;
-  padding: calc(0.3rem + 6px) 0.85rem 0.3rem;
-  background:
-    repeating-linear-gradient(90deg, #fff 0 8px, #2070A1 8px 16px) top / 100% 6px no-repeat,
-    var(--p-ink);
-  border: 2px solid #fff;
-  border-radius: 3px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35);
-  color: #fff;
-  font-family: var(--font-heading);
-  font-size: 1.3rem;
-  font-weight: var(--font-weight-bold);
-  letter-spacing: 0.04em;
-  line-height: 1.1;
-  text-transform: uppercase;
-  rotate: 5deg;
 }
 
 @media (min-width: 64em) {
@@ -512,10 +489,6 @@
   .night .price-card:nth-child(3) { rotate: 1.2deg; }
 
   .night .price-card:hover { rotate: 0deg; }
-
-  .night .price-card__badge {
-    right: -0.75rem;
-  }
 }
 
 /* ---- Portfolio: una riga per lavoro, foto e testo affiancati ------------ */
@@ -824,7 +797,7 @@
   display: grid;
   justify-items: center;
   gap: var(--space-xsmall);
-  margin-block: var(--space-large) var(--space-medium);
+  margin-block: var(--space-medium) var(--space-small);
   text-align: center;
 }
 
@@ -1019,4 +992,9 @@
   margin: 0 auto var(--space-medium);
   border-radius: 50%;
   box-shadow: 0 0 0 5px rgba(127, 200, 216, 0.25), 0 24px 50px rgba(0, 0, 0, 0.4);
+}
+
+/* Pagine dei lavori: l'immagine in cima non si attacca ai bottoni. */
+.night .hero .case-shot {
+  margin-top: var(--space-large);
 }

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Tonnara di Flumentorgiu: come l'abbiamo costruito | Mockly</title>
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="description" content="Come abbiamo costruito il sito del museo a cielo aperto della Tonnara di Flumentorgiu: dalla bozza su carta alla pubblicazione, con i 10 approfondimenti via QR code.">
+  <link rel="canonical" href="https://mockly.it/tonnara.html">
+  <meta name="theme-color" content="#0D0E3A">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="Mockly">
+  <meta property="og:title" content="Tonnara di Flumentorgiu: come l'abbiamo costruito">
+  <meta property="og:description" content="Come abbiamo costruito il sito del museo a cielo aperto della Tonnara di Flumentorgiu: dalla bozza su carta alla pubblicazione, con i 10 approfondimenti via QR code.">
+  <meta property="og:url" content="https://mockly.it/tonnara.html">
+  <meta property="og:image" content="https://mockly.it/assets/img/og-cover.png?v=20261120">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mockly: parti dal tuo lavoro, al sito pensiamo noi.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tonnara di Flumentorgiu: come l'abbiamo costruito">
+  <meta name="twitter:description" content="Come abbiamo costruito il sito del museo a cielo aperto della Tonnara di Flumentorgiu: dalla bozza su carta alla pubblicazione, con i 10 approfondimenti via QR code.">
+  <meta name="twitter:image" content="https://mockly.it/assets/img/og-cover.png?v=20261120">
+  <meta name="twitter:image:alt" content="Mockly: parti dal tuo lavoro, al sito pensiamo noi.">
+
+  <link rel="preload" href="assets/fonts/barlow-condensed-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/barlow-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/fonts.css?v=20261120c">
+
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="assets/img/logo-mockly-icon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="assets/img/favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <link rel="stylesheet" href="assets/css/tokens.css?v=20261120c">
+  <link rel="stylesheet" href="assets/css/base.css?v=20261120c">
+  <link rel="stylesheet" href="assets/css/components.css?v=20261120c">
+  <link rel="stylesheet" href="assets/css/pages.css?v=20261120c">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Tonnara di Flumentorgiu: come l'abbiamo costruito",
+    "url": "https://mockly.it/tonnara.html",
+    "about": {
+      "@type": "CreativeWork",
+      "name": "Tonnara di Flumentorgiu",
+      "url": "https://tonnaradiflumentorgiu.it",
+      "creator": { "@type": "Organization", "name": "Mockly", "url": "https://mockly.it/" }
+    }
+  }
+  </script>
+</head>
+
+<body class="page-body night">
+  <!-- Sfondo: blu notte fermo, con una sola luce dall'alto. -->
+  <div class="scene-bg" aria-hidden="true"></div>
+
+  <a class="skip-link" href="#contenuto">Salta al contenuto</a>
+
+  <!-- Intestazione: uguale su tutte le pagine (logo, menu, tasto Chiama). -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+        <a class="site-header__logo" href="index.html">
+        <img class="site-header__logo-icon" src="assets/img/logo-mockly-icon-light.svg" alt="" width="100" height="100">
+        <span class="site-header__logo-text">mockly</span>
+      </a>
+
+      <!-- Menu orizzontale (visibile da 1280px in su, sotto resta solo l'hamburger) -->
+      <nav class="site-header__navigation" aria-label="Menu principale">
+        <ul class="site-header__navigation-list">
+          <li><a class="site-header__navigation-link" href="index.html">Home</a></li>
+          <li><a class="site-header__navigation-link" href="siti-web.html">Siti web</a></li>
+          <li><a class="site-header__navigation-link is-current" href="portfolio.html" aria-current="page">Portfolio</a></li>
+          <li><a class="site-header__navigation-link" href="chi-siamo.html">Chi siamo</a></li>
+          <li><a class="site-header__navigation-link" href="contatti.html">Contatti</a></li>
+        </ul>
+      </nav>
+
+      <!-- Hamburger: apre il pannello sotto i 1280px -->
+      <button class="site-header__toggle" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="menu-principale">
+        <span class="site-header__toggle-bar" aria-hidden="true"></span>
+        <span class="site-header__toggle-bar" aria-hidden="true"></span>
+        <span class="site-header__toggle-bar" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <!-- Velo scuro, chiude il menu se ci clicchi sopra -->
+    <div class="site-header__overlay"></div>
+
+    <!-- Pannello del menu (telefono/tablet) -->
+    <div class="site-header__panel" id="menu-principale" role="dialog" aria-modal="true" aria-label="Menu">
+      <div class="site-header__panel-head">
+        <p class="site-header__panel-brand"><img class="site-header__logo-icon" src="assets/img/logo-mockly-icon-light.svg" alt="" width="100" height="100">
+        <span class="site-header__logo-text">mockly</span></p>
+        <button class="site-header__close" type="button" aria-label="Chiudi il menu" data-menu-close>
+          <svg class="site-header__close-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <!-- Menu, versione telefono -->
+      <nav aria-label="Menu principale su telefono">
+        <p class="site-header__panel-label" aria-hidden="true">Menu</p>
+        <ul class="site-header__panel-list">
+          <li><a class="site-header__panel-link" href="index.html"><span class="site-header__panel-name">Home</span><span class="site-header__panel-hint">Da dove si parte</span></a></li>
+          <li><a class="site-header__panel-link" href="siti-web.html"><span class="site-header__panel-name">Siti web</span><span class="site-header__panel-hint">Cosa facciamo e l'assistenza</span></a></li>
+          <li><a class="site-header__panel-link is-current" href="portfolio.html" aria-current="page"><span class="site-header__panel-name">Portfolio</span><span class="site-header__panel-hint">Due lavori veri e dodici esempi</span></a></li>
+          <li><a class="site-header__panel-link" href="chi-siamo.html"><span class="site-header__panel-name">Chi siamo</span><span class="site-header__panel-hint">Noah, Adriano e Simone</span></a></li>
+          <li><a class="site-header__panel-link" href="contatti.html"><span class="site-header__panel-name">Contatti</span><span class="site-header__panel-hint">WhatsApp, telefono, modulo</span></a></li>
+        </ul>
+      </nav>
+      <!-- In fondo al menu: i due modi più rapidi per sentirci -->
+      <div class="site-header__panel-foot">
+        <a class="button button--primary site-header__panel-contact" href="https://wa.me/393517578080" aria-label="Scrivici su WhatsApp al 351 757 8080">WhatsApp</a>
+        <a class="button button--ghost site-header__panel-contact" href="tel:+393517578080" aria-label="Chiama il 351 757 8080">Chiama</a>
+      </div>
+    </div>
+  </header>
+
+    <main id="contenuto">
+
+    <!-- ── Hero ─────────────────────────────────────────────────────── -->
+    <section class="hero hero--page">
+      <div class="container">
+        <h1 class="hero__title-page">Tonnara di Flumentorgiu</h1>
+        <p class="hero__text">
+          Il sito del museo a cielo aperto della Tonnara di Flumentorgiu, sulla Costa Verde.
+          È nato come progetto di scuola: il sito l'ha costruito quasi tutto Noah, con l'aiuto di Adriano.
+        </p>
+        <div class="hero__actions button-group button-group--stacked">
+          <a class="button button--secondary" href="https://tonnaradiflumentorgiu.it" target="_blank" rel="noopener" aria-label="Apri il sito della Tonnara di Flumentorgiu in una nuova scheda">Apri il sito</a>
+        </div>
+        <figure class="case-shot">
+          <img src="assets/img/projects/tonnara-hero.webp" srcset="assets/img/projects/tonnara-hero-400.webp 400w, assets/img/projects/tonnara-hero-800.webp 800w, assets/img/projects/tonnara-hero.webp 1440w" sizes="(min-width: 64em) 60rem, 92vw"
+               alt="Pagina iniziale del sito della Tonnara di Flumentorgiu: il titolo sopra una foto della costa, con i tasti Come arrivarci e Museo a cielo aperto"
+               width="1440" height="900">
+          <figcaption>La pagina iniziale del sito, oggi.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ── Da dove siamo partiti ────────────────────────────────────── -->
+    <section class="section" id="partenza">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title section__title--wide">Da dove siamo partiti</h2>
+          <p class="section__intro">
+            Lo scopo era far conoscere la Tonnara di Flumentorgiu, un luogo importante per la storia della Sardegna.
+            Al progetto hanno lavorato due classi: una ha curato la parte storica, l'altra (la nostra) il sito.
+            Testi e immagini vengono dal libro sulla storia della Tonnara di Francesca Trebino, Paola Usai e dell'Associazione Porto Palma.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Come l'abbiamo costruito ─────────────────────────────────── -->
+    <section class="section" id="cosa">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title section__title--wide">Come l'abbiamo costruito</h2>
+          <p class="section__intro">Un passo alla volta, imparando strada facendo.</p>
+        </div>
+
+        <ol class="step-list">
+          <li class="step-list__item">
+            <div>
+              <h3 class="step-list__title">Capire il luogo</h3>
+              <p class="step-list__text">Noah ha raccolto tutto quello che si trovava su internet sulla Tonnara e ha deciso che tipo di sito serviva.</p>
+            </div>
+          </li>
+          <li class="step-list__item">
+            <div>
+              <h3 class="step-list__title">La bozza su carta</h3>
+              <p class="step-list__text">Prima del codice, qualche foglio a quadretti: la pagina iniziale da computer e da telefono, e la pagina di un approfondimento con l'audioguida.</p>
+            </div>
+          </li>
+          <li class="step-list__item">
+            <div>
+              <h3 class="step-list__title">La prima versione</h3>
+              <p class="step-list__text">Solo i contenuti, in HTML, con un po' di stile: ancora senza un'identità sua e senza animazioni.</p>
+            </div>
+          </li>
+          <li class="step-list__item">
+            <div>
+              <h3 class="step-list__title">Animazioni, correzioni e telefono</h3>
+              <p class="step-list__text">Poi le prime animazioni e la versione per telefono. Gli errori li abbiamo sistemati insieme ad Adriano, aiutandoci con Claude, un'intelligenza artificiale.</p>
+            </div>
+          </li>
+          <li class="step-list__item">
+            <div>
+              <h3 class="step-list__title">Pubblicazione e Google</h3>
+              <p class="step-list__text">Quando l'associazione ha preso il nome del sito e lo spazio web, l'abbiamo pubblicato, anche se non era finito, e abbiamo lavorato per farlo trovare su Google.</p>
+            </div>
+          </li>
+          <li class="step-list__item">
+            <div>
+              <h3 class="step-list__title">Dieci approfondimenti</h3>
+              <p class="step-list__text">Con i testi preparati dall'altra classe abbiamo costruito dieci pagine di approfondimento, che si aprono solo sul posto con un QR code.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ── La bozza ─────────────────────────────────────────────────── -->
+    <section class="section" id="bozza">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title section__title--wide">Dalla bozza al sito</h2>
+          <p class="section__intro">I fogli di partenza e la prima versione, accanto a quella di oggi.</p>
+        </div>
+        <figure class="case-shot">
+          <img src="assets/img/projects/tonnara-bozza.webp" srcset="assets/img/projects/tonnara-bozza-800.webp 800w, assets/img/projects/tonnara-bozza.webp 1690w" sizes="(min-width: 64em) 60rem, 92vw"
+               alt="Bozze su fogli a quadretti: la pagina iniziale con logo, menu, titolo e due pulsanti, la versione da telefono e la pagina di un approfondimento con audioguida e foto"
+               width="1690" height="1170" loading="lazy">
+          <figcaption>La bozza su carta: pagina iniziale, telefono e approfondimento.</figcaption>
+        </figure>
+        <figure class="case-shot">
+          <img src="assets/img/projects/tonnara-prima-versione.webp" srcset="assets/img/projects/tonnara-prima-versione-800.webp 800w, assets/img/projects/tonnara-prima-versione.webp 1510w" sizes="(min-width: 64em) 60rem, 92vw"
+               alt="A sinistra la prima versione del sito, grigia e senza immagini; a destra la versione con la foto del mare e il titolo Tonnara di Flumentorgiu"
+               width="1510" height="1160" loading="lazy">
+          <figcaption>La prima versione, solo contenuti, e quella dopo i primi miglioramenti.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ── Sul posto ────────────────────────────────────────────────── -->
+    <section class="section" id="tempi-lavoro">
+      <div class="container container--narrow">
+        <div class="section__header">
+          <h2 class="section__title section__title--wide">Anche sul posto</h2>
+          <p class="section__intro">
+            Durante il lavoro ci sono stati diversi incontri con persone che ci hanno aiutato a capire i testi e il progetto.
+            L'ultimo è stato una gita alla Tonnara con le due classi. Oggi il sito è finito, in italiano e in inglese,
+            e quando ci viene in mente qualcosa da migliorare lo aggiungiamo.
+          </p>
+        </div>
+        <p class="push-medium">
+          <a class="button button--ghost" href="portfolio.html">Torna al portfolio</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ── Chiusura ─────────────────────────────────────────────────── -->
+    <section class="call-to-action is-highlighted">
+      <div class="container">
+        <div class="call-to-action__inner">
+          <div>
+            <h2 class="call-to-action__title">Hai un progetto da far partire?</h2>
+            <p class="call-to-action__text">
+              Raccontaci cosa vuoi fare: ti diciamo come lo costruiremmo e quanto ci vuole.
+            </p>
+          </div>
+          <div>
+            <div class="call-to-action__actions button-group button-group--stacked">
+              <a class="button button--primary" href="https://wa.me/393517578080?text=Ciao%20Mockly%2C%20ho%20visto%20il%20lavoro%20per%20la%20Tonnara%20di%20Flumentorgiu%20e%20vorrei%20parlarvi%20di%20un%20progetto." aria-label="Scrivici su WhatsApp al 351 757 8080">Scrivici su WhatsApp</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  
+
+  <!-- Piè di pagina: uguale su tutte le pagine. -->
+  <footer class="site-footer">
+    <div class="container">
+
+      <!-- La facciata di un negozio: la serranda si alza mentre arrivi in fondo. -->
+      <div class="shopfront" data-shopfront>
+        <p class="shopfront__sign"><img class="shopfront__logo" src="assets/img/logo-mockly-icon-light.svg" alt="" width="100" height="100"><span class="shopfront__name">mockly</span><span class="shopfront__motto">Siti web, senza complessità.</span></p>
+        <div class="shopfront__awning" aria-hidden="true"></div>
+
+        <div class="shopfront__bay" data-shopfront-bay>
+          <div class="shopfront__shop">
+            <div class="shopfront__glass">
+              <ul class="shopfront__contacts">
+                <li><a class="shopfront__contact" href="https://wa.me/393517578080" aria-label="Scrivici su WhatsApp al 351 757 8080"><svg class="shopfront__icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 15.5 5 12a6 6 0 1 1 2.4 2.1L4 15.5Z"/></svg><span class="shopfront__contact-text"><small>WhatsApp</small>351 757 8080</span></a></li>
+                <li><a class="shopfront__contact" href="tel:+393517578080" aria-label="Chiama il 351 757 8080"><svg class="shopfront__icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M6.6 2.5 4.3 3.2C3.5 3.5 3 4.3 3.1 5.1c.7 6 5.8 11.1 11.8 11.8.8.1 1.6-.4 1.9-1.2l.7-2.3a1 1 0 0 0-.6-1.2l-3.2-1.2a1 1 0 0 0-1.1.3l-1 1.2a9.6 9.6 0 0 1-4.6-4.6l1.2-1a1 1 0 0 0 .3-1.1L7.8 3.1a1 1 0 0 0-1.2-.6Z"/></svg><span class="shopfront__contact-text"><small>Telefono</small>351 757 8080</span></a></li>
+                <li><a class="shopfront__contact" href="mailto:mockly.website@gmail.com" aria-label="Scrivi a mockly.website@gmail.com"><svg class="shopfront__icon" viewBox="0 0 20 20" aria-hidden="true"><rect x="2.5" y="4.5" width="15" height="11" rx="2"/><path d="m3 6 7 5 7-5"/></svg><span class="shopfront__contact-text"><small>Email</small>mockly.website@gmail.com</span></a></li>
+                <li><a class="shopfront__contact" href="https://www.instagram.com/mockly.site/" target="_blank" rel="noopener"><svg class="shopfront__icon" viewBox="0 0 20 20" aria-hidden="true"><rect x="3" y="3" width="14" height="14" rx="4"/><circle cx="10" cy="10" r="3.2"/><circle cx="14.2" cy="5.8" r="0.6"/></svg><span class="shopfront__contact-text"><small>Instagram</small>@mockly.site</span></a></li>
+              </ul>
+            </div>
+
+            <nav class="shopfront__door" aria-label="Collegamenti del footer">
+              <ul class="shopfront__pages">
+                <li><a class="shopfront__page" href="index.html">Home</a></li>
+                <li><a class="shopfront__page" href="siti-web.html">Siti web</a></li>
+                <li><a class="shopfront__page" href="portfolio.html">Portfolio</a></li>
+                <li><a class="shopfront__page" href="chi-siamo.html">Chi siamo</a></li>
+                <li><a class="shopfront__page" href="contatti.html">Contatti</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="shopfront__roll" aria-hidden="true">
+            <span class="shopfront__paint">mockly</span>
+            <span class="shopfront__rail"></span>
+          </div>
+        </div>
+
+        <div class="shopfront__step" aria-hidden="true"></div>
+      </div>
+
+      <div class="site-footer__legal">
+        <span>© 2026 Mockly</span>
+        <a class="site-footer__link" href="privacy.html">Privacy</a>
+        <a class="site-footer__link" href="cookie.html">Cookie</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="whatsapp-bar">
+    <a class="button button--primary whatsapp-bar__button" href="https://wa.me/393517578080?text=Ciao%20Mockly%2C%20ho%20visto%20il%20vostro%20sito%20e%20vorrei%20parlare%20del%20sito%20della%20mia%20attivit%C3%A0." aria-label="Scrivici su WhatsApp al 351 757 8080">
+      <svg class="whatsapp-bar__icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 15.5 5 12a6 6 0 1 1 2.4 2.1L4 15.5Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+
+  <button class="back-to-top" type="button" aria-label="Torna in cima alla pagina">
+    <svg class="back-to-top__icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 16V4m0 0 6 6m-6-6L4 10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+
+  <script src="assets/js/main.js?v=20261120c"></script>
+
+</body>
+</html>

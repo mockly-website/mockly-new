@@ -856,25 +856,6 @@
   border-color: var(--color-accent);
 }
 
-.price-card--featured {
-  background-color: var(--color-accent-soft);
-  border: var(--border-width-medium) solid var(--color-accent);
-}
-
-.price-card__badge {
-  display: inline-block;
-  align-self: flex-start;
-  margin-bottom: var(--space-small);
-  padding: var(--space-3xsmall) var(--space-xsmall);
-  background-color: var(--color-accent);
-  border-radius: var(--radius-pill);
-  color: var(--color-text-inverse-on-accent);
-  font-family: var(--font-body);
-  font-size: var(--font-size-label);
-  font-weight: var(--font-weight-medium);
-  letter-spacing: var(--letter-spacing-label);
-}
-
 .price-card__plan {
   margin-bottom: var(--space-2xsmall);
   font-family: var(--font-heading);
