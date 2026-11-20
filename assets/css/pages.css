@@ -973,3 +973,24 @@
   box-shadow: 0 0 0 5px rgba(127, 200, 216, 0.25), 0 24px 50px rgba(0, 0, 0, 0.4);
 }
 
+
+/* Squadra: cosa sa fare ognuno, in piccole etichette. */
+.person-card__skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem;
+  margin: var(--space-xsmall) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.person-card__skills li {
+  padding: 0.3rem 0.75rem;
+  background-color: rgba(127, 200, 216, 0.12);
+  border: 1px solid rgba(127, 200, 216, 0.3);
+  border-radius: 999px;
+  color: #DFF3F7;
+  font-size: var(--font-size-label);
+  font-weight: var(--font-weight-bold);
+}
