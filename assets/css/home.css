@@ -441,13 +441,19 @@
   font-weight: var(--font-weight-bold);
 }
 
-.team__faces img {
+.team__initial {
+  display: grid;
+  place-items: center;
   width: clamp(6.5rem, 4rem + 9vw, 12.5rem);
-  height: auto;
   aspect-ratio: 1;
-  object-fit: cover;
+  background-color: #7FC8D8;
   border: 5px solid var(--l-ink);
   border-radius: 50%;
+  color: #0D0E3A;
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 2rem + 4vw, 6rem);
+  font-weight: var(--font-weight-extrabold);
+  line-height: 1;
 }
 
 @media (min-width: 64em) {

@@ -623,6 +623,9 @@
   height: 11rem;
   border: 5px solid var(--p-ink);
   box-shadow: 0 0 0 2px var(--p-line);
+  font-family: var(--font-heading);
+  font-size: 5rem;
+  line-height: 1;
 }
 
 .night .person-card__name {

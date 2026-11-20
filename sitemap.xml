@@ -9,9 +9,6 @@
     <image:image><image:loc>https://mockly.it/assets/img/projects/ovunque-accessibile-hero.webp</image:loc></image:image>
     <image:image><image:loc>https://mockly.it/assets/img/projects/forno-nero-phone.webp</image:loc></image:image>
     <image:image><image:loc>https://mockly.it/assets/img/projects/lama-e-pettine-phone.webp</image:loc></image:image>
-    <image:image><image:loc>https://mockly.it/assets/img/team/noah.webp</image:loc></image:image>
-    <image:image><image:loc>https://mockly.it/assets/img/team/adriano.webp</image:loc></image:image>
-    <image:image><image:loc>https://mockly.it/assets/img/team/simone.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://mockly.it/siti-web.html</loc>
@@ -55,9 +52,6 @@
   <url>
     <loc>https://mockly.it/chi-siamo.html</loc>
     <lastmod>2026-11-07</lastmod>
-    <image:image><image:loc>https://mockly.it/assets/img/team/noah.webp</image:loc></image:image>
-    <image:image><image:loc>https://mockly.it/assets/img/team/adriano.webp</image:loc></image:image>
-    <image:image><image:loc>https://mockly.it/assets/img/team/simone.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://mockly.it/contatti.html</loc>
